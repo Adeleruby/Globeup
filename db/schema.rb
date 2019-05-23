@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_23_142429) do
+ActiveRecord::Schema.define(version: 2019_05_23_161625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attendees", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_attendees_on_event_id"
+    t.index ["user_id"], name: "index_attendees_on_user_id"
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.string "location"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "city_id"
+    t.bigint "user_id"
+    t.text "description"
+    t.datetime "starts"
+    t.datetime "ends"
+    t.string "category"
+    t.index ["city_id"], name: "index_events_on_city_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.string "category"
+    t.string "string"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +62,23 @@ ActiveRecord::Schema.define(version: 2019_05_23_142429) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.bigint "current_location_id"
+    t.bigint "from_id"
+    t.bigint "moving_to_id"
+    t.index ["current_location_id"], name: "index_users_on_current_location_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["from_id"], name: "index_users_on_from_id"
+    t.index ["moving_to_id"], name: "index_users_on_moving_to_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "attendees", "events"
+  add_foreign_key "attendees", "users"
+  add_foreign_key "events", "cities"
+  add_foreign_key "events", "users"
+  add_foreign_key "users", "cities", column: "current_location_id"
+  add_foreign_key "users", "cities", column: "from_id"
+  add_foreign_key "users", "cities", column: "moving_to_id"
 end
