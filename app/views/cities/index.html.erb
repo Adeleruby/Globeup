@@ -1,0 +1,15 @@
+<div class="cards-container">
+  <% @cities.each do |city| %>
+    <%= link_to city_path(city) do %>
+      <div class="card">
+        <div class="card-info">
+          <div>
+            <h2><%= city.name %></h2>
+            <p><%= city.location %></p>
+            <p><%= city.description %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
