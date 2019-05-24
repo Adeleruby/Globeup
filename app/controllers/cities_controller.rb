@@ -6,10 +6,4 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
   end
-
-  private
-
-  def city_params
-    params.require(:city).permit(:name, :location, :description)
-  end
 end
