@@ -1,1 +1,43 @@
 // Specific CSS for your home-page
+.maincontainer {
+  min-height: 600px;
+  max-height: 600px;
+  background-color: #FBF1EC;
+  display: flex;
+  justify-content: space-between;
+}
+
+.maintext {
+  width: 40%;
+  padding-top: 100px;
+  margin-left: 100px;
+}
+
+.maintext h1{
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+.maintext h3 {
+  font-size: 20px;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+
+.citiescontainer {
+  background-color: #EEF7F0;
+  height: 500px;
+}
+
+.mainimage img {
+  margin-top:70px;
+  width:530px;
+}
+
+.maincontainerbtns {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
