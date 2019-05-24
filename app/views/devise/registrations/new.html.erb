@@ -23,6 +23,13 @@
                 required: true %>
     <%= f.input :cover_photo,
                 required: false %>
+    <%= f.input :moving_to_id, collection: City.all,
+                required: true %>
+    <%= f.input :from_id, collection: City.all,
+                required: false %>
+    <%= f.input :current_location_id, collection: City.all,
+                required: false %>
+
   </div>
 
   <div class="form-actions">
