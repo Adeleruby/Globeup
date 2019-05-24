@@ -1,15 +1,16 @@
-<div class="cards-container">
+<div class="card-index-container">
   <% @cities.each do |city| %>
     <%= link_to city_path(city) do %>
-      <div class="card">
-        <div class="card-info">
-          <div>
-            <h2><%= city.name %></h2>
-            <p><%= city.location %></p>
-            <p><%= city.description %></p>
-          </div>
+      <div class="city-index-card">
+        <%= cl_image_tag city.card_photo %>
+        <div class="city-index-card-info">
+          <h2><%= city.name %></h2>
+          <p><%= city.country_name %></p>
         </div>
       </div>
     <% end %>
   <% end %>
 </div>
+
+
+<!-- height: 200, width: 250, crop: :fill  -->
