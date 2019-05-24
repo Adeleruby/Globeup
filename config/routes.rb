@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#home'
+  devise_for :users
+  resources :cities do
+    resources :events, only: [:new, :create]
+  end
+  resources :events, only: [:show, :edit, :destroy] do
+    resources :attendees, only: [:create]
+  end
+  resources :attendees, only: [:destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
