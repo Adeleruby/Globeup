@@ -1,0 +1,39 @@
+<div class="show-container">
+  <div class="top-show-container">
+    <div class="title-box">
+      <h2> <%= @event.name %> </h2>
+      <p><%= @event.location.capitalize %></p>
+      <p> <%= @event.description %> </p>
+      <p>£<%= @event.category %></p>
+    </div>
+    <% @attendees.each do |person| %>
+      <div class="user-photo">
+        <%= cl_image_tag person.photo, height: 400, width: 600, crop: :fill %>
+      </div>
+    <% end %>
+    <div class="show-info">
+
+      <p>Organized by <%= @event.user.email %></p>
+      <p><%#= cl_image_tag @event.user.profile_pic, class: "avatar-bordered show-avatar", height: 60, width: 60, crop: :fill %></p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <% unless @event.user == current_user %>
+    <%= link_to "Register for this event!", event_attendees_path(@event), class: 'button-show' %>
+    <% end %>
+</div>
+
+<br>
+<br>
+
+<div class="d-flex justify-content-around">
+
+  <% if @event.user == current_user %>
+    <%= link_to "Edit your event", edit_event_path(@event), class: "btn btn-flat banner-button" %>
+
+  <%= link_to "Delete your event", event_path(@event), class: "btn btn-flat banner-button", :method => :delete %>
+
+
+  <% end %>
+</div>
