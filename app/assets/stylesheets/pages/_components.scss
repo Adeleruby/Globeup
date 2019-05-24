@@ -1,0 +1,58 @@
+body {
+  font-family: 'Lora', serif;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-family: 'Lora', serif;
+}
+
+p {
+  font-family: 'Lora', serif;
+}
+
+.btnpurple {
+  border-radius: 10px;
+  background-color: #89023E;
+  color: #FBF1EC;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+}
+
+.btnpurple:hover {
+  background-color: #FBF1EC;
+  color: #89023E;
+  border-radius: 10px;
+  border: 2px solid #89023E;
+}
+
+.btntransparent {
+  border-radius: 10px;
+  background-color: #FBF1EC;
+  color: #89023E;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  border: 2px solid #89023E;
+}
+
+.btntransparent:hover {
+  background-color: #FBF1EC;
+  color: #89023E;
+  border-radius: 10px;
+  border: 2px solid #89023E;
+}
+
+
+.maincontainerbtns {
+  display: flex;
+
+}
