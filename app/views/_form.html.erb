@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="form-title">
+       <h1>Edit your event</h1>
+      </div>
+
+      <div class="row justify-content-center">
+          <%= simple_form_for @event do |f| %>
+            <%= f.input :name %>
+            <%= f.input :location %>
+            <%= f.input :category %>
+            <%= f.input :description %>
+            <%#= f.input :photo %>
+            <%= f.button :submit, class: "btn btn-flat banner-button" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
