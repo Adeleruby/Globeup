@@ -15,6 +15,21 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :first_name,
+                required: true %>
+    <%= f.input :last_name,
+                required: true %>
+    <%= f.input :profile_pic,
+                required: true %>
+    <%= f.input :cover_photo,
+                required: false %>
+    <%= f.input :moving_to_id, collection: City.all,
+                required: true %>
+    <%= f.input :from_id, collection: City.all,
+                required: false %>
+    <%= f.input :current_location_id, collection: City.all,
+                required: false %>
+
   </div>
 
   <div class="form-actions">
