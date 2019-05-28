@@ -25,14 +25,16 @@
 }
 
 
-.citiescontainer {
-  background-color: #EEF7F0;
-  height: 500px;
+.citiescont {
+  min-height: 600px;
+  max-height: 600px;
+  background-color: #E2EBE4;
 }
 
 .mainimage img {
   margin-top:70px;
   width:530px;
+  margin-right: 100px;
 }
 
 .maincontainerbtns {
@@ -41,3 +43,196 @@
   width: 100%;
 
 }
+
+.city-img {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+
+.citiesrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 60px;
+
+}
+
+.citycard {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  display: flex
+}
+
+
+.cityname {
+  display: block;
+  position: relative;
+  margin-top: 350px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.cityname h2 h3 {
+  text-align: center;
+
+}
+
+.citiescont h1 {
+  font-weight: bolder;
+  margin-left: 60px;
+  padding-top: 30px;
+}
+
+.whitebox {
+  background-color: #fff;
+  display: flex;
+  min-height: 400px;
+  margin-top: 80px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.whiteboxtext {
+  width: 50%;
+  margin: auto;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.whiteboximg {
+  width: 50%;
+}
+
+.whiteboximg img {
+  width: 600px;
+  border: 6px solid #CC7178;
+  margin-left: -100px;
+  margin-top: 80px;
+}
+
+.reviewscont {
+  min-height: 600px;
+  max-height: 600px;
+  background-color: #FBF1EC;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviewscont h1 {
+  font-weight: bolder;
+  margin-left: 60px;
+  padding-top: 30px;
+  margin-bottom: 0px;
+}
+
+body {
+  background : repeat rgba(235, 150, 108, 0.1);
+}
+
+.main {
+  position : relative;
+}
+
+
+.mb-wrap {
+  margin : 20px auto;
+  padding : 20px;
+  position : relative;
+  width : 300px;
+}
+
+.mb-wrap p {
+  margin : 0;
+  padding : 0;
+}
+
+.mb-wrap blockquote {
+  margin : 0;
+  padding : 0;
+  position : relative;
+}
+
+.mb-wrap cite {
+  font-style : normal;
+}
+
+.mb-style-2 blockquote {
+  padding-top : 150px;
+}
+
+.mb-style-2 blockquote:after {
+    background: none repeat scroll 0 0 rgba(235, 150, 108, 0.8);
+    border-radius: 50% 50% 50% 50%;
+    color: rgba(255, 255, 255, 0.5);
+    content: "❞";
+    font-family: 'icons';
+    font-size: 70px;
+    height: 130px;
+    left: 50%;
+    line-height: 130px;
+    margin-left: -65px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+    top: 0;
+    width: 130px;
+}
+.mb-style-2 blockquote:before {
+    border-left: 5px solid rgba(235, 150, 108, 0.1);
+    border-radius: 50% 50% 50% 50%;
+    content: "";
+    height: 500px;
+    left: -50px;
+    position: absolute;
+    top: 0;
+    width: 500px;
+    z-index: -1;
+}
+
+.mb-style-2 blockquote p {
+  background : none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow : 0 -6px 0 rgba(235, 150, 108, 0.2);
+  color : rgba(235, 150, 108, 0.8);
+  font-family : Baskerville, Georgia, serif;
+  font-style : italic;
+  font-size : 28px;
+  line-height : 46px;
+  text-shadow : 0 1px 1px rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.mb-attribution {
+  text-align : right;
+}
+
+ .mb-members {
+  color : #D48158;
+  font-size : 18px;
+  font-weight : bold;
+  padding-top : 10px;
+  text-shadow : 0 1px 1px rgba(255, 255, 255, 0.1);
+  text-transform : uppercase;
+}
+
+cite p {
+  color : #D7AA94;
+  font-style : italic;
+}
+
+
+
+
+
