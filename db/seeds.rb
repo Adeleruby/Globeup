@@ -18,3 +18,12 @@ puts "Creating cities"
   )
   city.save!
 end
+
+
+interest = [
+  ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
+]
+interest.each do |category|
+  Interest.create( category: category )
+  interest.save!
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_121436) do
+ActiveRecord::Schema.define(version: 2019_05_28_145205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2019_05_24_121436) do
 
   create_table "interests", force: :cascade do |t|
     t.string "category"
-    t.string "string"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -69,6 +68,8 @@ ActiveRecord::Schema.define(version: 2019_05_24_121436) do
     t.bigint "moving_to_id"
     t.string "profile_pic"
     t.string "cover_photo"
+    t.string "interests"
+    t.text "about"
     t.index ["current_location_id"], name: "index_users_on_current_location_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["from_id"], name: "index_users_on_from_id"
