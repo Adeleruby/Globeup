@@ -3,23 +3,36 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin: 0 40px;
+  a:hover {
+    text-decoration: none;
+  }
   .city-index-card {
     width: 22.5rem;
     border: 0.5px solid #464655;
-    margin: 20px 0px;
+    margin: 20px 5px;
     color: #464655;
+    transition-duration: 0.5s;
+    box-sizing: content-box !important ;
     img {
       width: inherit;
+      overflow: hidden;
     }
     .city-index-card-info {
       width: inherit;
       text-align: center;
+      padding: 20px 0px;
+      background: white;
+      overflow: hidden;
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 }
 .city-index-card:hover {
-  text-decoration: none;
-  color: #464655;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 15px 5px;
 }
 
 .cities-banner-card {
