@@ -20,10 +20,8 @@ puts "Creating cities"
 end
 
 
-interest = [
-  ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
-]
+puts "Choose your Interests"
+interest = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
 interest.each do |category|
   Interest.create( category: category )
-  interest.save!
 end
