@@ -12,19 +12,26 @@
         <%= cl_image_tag @user.profile_pic, height: 266, width: 300, crop: :fill %>
         <%= cl_image_tag @user.cover_photo, height: 266, width: 300, crop: :fill %>
         <div class="card-info">
-          <div>
-            <h2><%= @user.first_name %></h2>
-            <h2><%= @user.last_name %></h2>
-            <p><%= @user.current_location_id %></p>
-            <p><%= @user.from_id %></p>
-            <p><%= @user.moving_to_id %></p>
-          </div>
-          <%= cl_image_tag @user.profile_pic, class: "avatar-bordered", height: 60, width: 60, crop: :fill %>
+          <%= cl_image_tag @user.profile_pic, class: "avatar-large", height: 60, width: 60, crop: :fill %>
+        </div>
+        <div>
+          <%#= link_to "Message", PATH TO WRITE, class: "btn-flat" %>
+          <p><%= @user.current_location_id %></p>
+          <p>Originally from <%= @user.from_id %></p>
+          <p>Just moved to <%= @user.moving_to_id %></p>
         </div>
       </div>
     <% end %>
 </div>
 
-<div>
-
+<div class="justify-content-center">
+  <h2>Background & Interests</h2>
+  <p></p>
+  <h2>About</h2>
+  <p></p>
 </div>
+
+<div>
+  <h2>Tribes in common</h2>
+</div>
+

@@ -18,3 +18,10 @@ puts "Creating cities"
   city.remote_card_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1558715593/pexels-photo-262413_yuwyls.jpg"
   city.save!
 end
+
+
+puts "Choose your Interests"
+interest = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
+interest.each do |category|
+  Interest.create( category: category )
+end
