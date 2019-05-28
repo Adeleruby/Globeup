@@ -9,8 +9,11 @@
           <%= simple_form_for [@city, @event] do |f| %>
           <%= f.input :name %>
           <%= f.input :location %>
+          <%= f.input :start %>
+          <%= f.input :end %>
           <%= f.input :description %>
           <%= f.input :category %>
+          <%= f.input :photo %>
           <%= f.button :submit, class: "btn btn-flat banner-button"  %>
           </div>
         <% end %>
