@@ -3,13 +3,13 @@
     <div class="toggle-button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
       <i class="fas fa-angle-double-down"></i>
     </div>
-    <%= link_to "Home", new_user_session_path, class: "hidden-md" %>
+    <%= link_to "Home", root_path, class: "hidden-md" %>
     <%= link_to "Who we are", new_user_registration_path, class: "hidden-md" %>
-    <%= link_to "Cities", new_user_session_path, class: "hidden-md" %>
-    <%= link_to "Events", new_user_registration_path, class: "hidden-md" %>
+    <%= link_to "Cities", cities_path, class: "hidden-md" %>
+    <%= link_to "Events", root_path, class: "hidden-md" %>
   </div>
   <div class="mid-nav">
-    <a href="#" class="mid-logo">GlobeUp</a>
+    <a href="/" class="mid-logo">GlobeUp</a>
   </div>
   <div class="rhs-nav">
     <% if !current_user.nil? %>
