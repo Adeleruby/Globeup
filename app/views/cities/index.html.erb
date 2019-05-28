@@ -1,15 +1,26 @@
-<div class="cards-container">
+<div class="banner" >
+  <div class="cities-banner-card">
+    <h1>Cities</h1>
+    <a class="btn btn-info" href="/">Search</a>
+  </div>
+</div>
+<div class="card-index-container">
   <% @cities.each do |city| %>
     <%= link_to city_path(city) do %>
-      <div class="card">
-        <div class="card-info">
-          <div>
-            <h2><%= city.name %></h2>
-            <p><%= city.location %></p>
-            <p><%= city.description %></p>
-          </div>
+      <div class="city-index-card">
+        <div class="corner-top-right"></div>
+        <div class="corner-top-left"></div>
+        <div class="corner-bottom-right"></div>
+        <div class="corner-bottom-left"></div>
+        <%= cl_image_tag city.card_photo %>
+        <div class="city-index-card-info">
+          <p><%= city.country_name %></p>
+          <h2><%= city.name %></h2>
+          <!-- <p> Explore </p> -->
         </div>
       </div>
     <% end %>
   <% end %>
 </div>
+
+<!-- height: 200, width: 250, crop: :fill  -->

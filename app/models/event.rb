@@ -6,4 +6,5 @@ class Event < ApplicationRecord
   validates :location, presence: true
   validates :category, presence: true
   validates :description, presence: true
+  mount_uploader :photo, PhotoUploader
 end
