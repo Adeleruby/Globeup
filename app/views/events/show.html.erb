@@ -9,8 +9,8 @@
       <p>Venue: <%= @event.location.capitalize %></p>
       <p> <%= @event.description %> </p>
       <p><%= @event.category %></p>
-      <p> Starts at <%= @event.start.strftime("%I:%M%p") %> </p>
-      <p> Ends at <%= @event.end.strftime("%I:%M%p") %> </p>
+      <p> Starts at <%= @event.starts.strftime("%I:%M%p") %> </p>
+      <p> Ends at <%= @event.ends.strftime("%I:%M%p") %> </p>
     </div>
 
       <p>Organized by <%= @event.user.email %></p>
