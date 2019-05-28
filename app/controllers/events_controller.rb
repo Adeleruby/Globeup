@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-     @attendees = Attendee.where(event_id: @event.id)
+    @attendees = Attendee.where(event_id: @event.id)
   end
 
   def new
@@ -49,5 +49,5 @@ end
 private
 
 def event_params
-  params.require(:event).permit(:name, :location, :description, :category)
+  params.require(:event).permit(:name, :location, :description, :category, :photo, :start, :end)
 end
