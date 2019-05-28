@@ -16,9 +16,9 @@
         </div>
         <div>
           <%#= link_to "Message", PATH TO WRITE, class: "btn-flat" %>
-          <p><%= @user.current_location_id %></p>
-          <p>Originally from <%= @user.from_id %></p>
-          <p>Just moved to <%= @user.moving_to_id %></p>
+          <p>Living now in <%= @user.current_location.name %></p>
+          <p>Originally from <%= @user.from.name %></p>
+          <p>Moving to <%= @user.moving_to.name%></p>
         </div>
       </div>
     <% end %>
@@ -26,12 +26,14 @@
 
 <div class="justify-content-center">
   <h2>Background & Interests</h2>
-  <p></p>
+  <% @user.interests.each do |interest| %>
+    <p><%= interest.category %></p>
+  <% end %>
   <h2>About</h2>
-  <p></p>
+  <p><%= @user.about %></p>
 </div>
 
 <div>
-  <h2>Tribes in common</h2>
+  <h2>Interests in common</h2>
 </div>
 
