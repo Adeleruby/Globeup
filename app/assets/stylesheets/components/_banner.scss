@@ -1,0 +1,12 @@
+.banner {
+  height: 500px;
+  margin-bottom: 100px;
+  background-image: asset-url('women-at-bar.jpg');
+  background-repeat: no-repeat;
+  // // background-attachment: fixed;
+  background-position: 65% 41%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
