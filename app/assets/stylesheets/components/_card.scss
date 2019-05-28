@@ -13,7 +13,81 @@
     margin: 20px 5px;
     color: #464655;
     transition-duration: 0.5s;
-    box-sizing: content-box !important ;
+    box-sizing: content-box !important;
+    position: relative;
+    overflow: hidden;
+    .corner-top-right {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      right: -25px;
+      top: -25px;
+    }
+    .corner-top-left {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      left: -25px;
+      top: -25px;
+    }
+    .corner-bottom-right {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      bottom: -25px;
+      right: -25px;
+    }
+    .corner-bottom-left {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      bottom: -25px;
+      left: -25px;
+    }
+    // .triangle {
+    //   display: inline-block;
+    //   // margin: 0 5px;
+    //   vertical-align: middle;
+    // }
+    // .triangle-0 {
+    //   width: 50px;
+    //   height: 50px;
+    //   border-bottom: solid 30px #89023E;
+    //   border-right: solid 30px #89023E;
+    //   border-left: solid 30px transparent;
+    //   border-top: solid 30px transparent;
+    //   position: absolute;
+    //   bottom: -25px;
+    //   right: -25px;
+    // }
     img {
       width: inherit;
       overflow: hidden;
