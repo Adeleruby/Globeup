@@ -12,8 +12,13 @@
     <a href="#" class="mid-logo">GlobeUp</a>
   </div>
   <div class="rhs-nav">
-    <%= link_to "Login", new_user_session_path, class: "" %>
+    <% if !current_user.nil? %>
+    <%= link_to "Logout", destroy_user_session_path, class: 'nav-link', method: :delete %>
+    <% else %>
+    <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
     <%= link_to "Sign Up", new_user_session_path, class: "" %>
+          <!-- <a class="nav-link" href="#">Login</a> -->
+    <% end %>
   </div>
   <div class="collapse" id="collapseExample">
     <div class="column">
