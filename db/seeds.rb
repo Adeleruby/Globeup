@@ -13,8 +13,8 @@ puts "Creating cities"
 20.times do
   city = City.new(
     name: Faker::Address.city,
-    description: Faker::Lorem.word,
-    location: Faker::Lorem.word
+    country_name: Faker::Lorem.word
   )
+  city.remote_card_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1558715593/pexels-photo-262413_yuwyls.jpg"
   city.save!
 end
