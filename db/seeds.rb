@@ -19,9 +19,12 @@ puts "Creating cities"
   city.save!
 end
 
-
+puts "Destroying Interests"
+Interest.destroy_all
 puts "Choose your Interests"
 interest = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
 interest.each do |category|
-  Interest.create( category: category )
+  interest = Interest.new( category: category )
+  interest.save!
+
 end
