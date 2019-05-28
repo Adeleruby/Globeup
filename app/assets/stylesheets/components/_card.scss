@@ -1,1 +1,27 @@
-.
+.card-index-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  .city-index-card {
+    width: 22.5rem;
+    img {
+      width: inherit;
+    }
+    .city-index-card-info {
+      width: inherit;
+    }
+  }
+}
+
+.cities-banner-card {
+  width: 400px;
+  margin: auto;
+  color: black;
+  background: #E2EBE4;
+  border: 2px solid black;
+  text-align: center;
+    h1 {
+      font-size: 50px
+    }
+}
