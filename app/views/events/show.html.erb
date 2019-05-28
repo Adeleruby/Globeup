@@ -2,7 +2,7 @@
   <div class="top-show-container">
     <div class="title-box">
       <div class="event-photo">
-        <%= cl_image_tag @event.photo %>
+        <%= cl_image_tag @event.photo, height: 400, width: 600, crop: :fill %>
       </div>
       <h2> <%= @event.name %> </h2>
       <strong> Details </strong>
@@ -12,17 +12,19 @@
       <p> Starts at <%= @event.start.strftime("%I:%M%p") %> </p>
       <p> Ends at <%= @event.end.strftime("%I:%M%p") %> </p>
     </div>
-    <% @attendees.each do |person| %>
+
+      <p>Organized by <%= @event.user.email %></p>
+      <p><%= cl_image_tag @event.user.profile_pic, class: "avatar-bordered show-avatar", height: 60, width: 60, crop: :fill %></p>
+      </div>
+    </div>
+   <div>
+      <p> Members in attendance </p>
+      <% @attendees.each do |person| %>
       <div class="user-photo">
         <%= cl_image_tag person.photo, height: 400, width: 600, crop: :fill %>
       </div>
-    <% end %>
+      <% end %>
     <div class="show-info">
-
-      <p>Organized by <%= @event.user.email %></p>
-      <p><%#= cl_image_tag @event.user.profile_pic, class: "avatar-bordered show-avatar", height: 60, width: 60, crop: :fill %></p>
-    </div>
-  </div>
 </div>
 <div class="container">
   <% unless @event.user == current_user %>
