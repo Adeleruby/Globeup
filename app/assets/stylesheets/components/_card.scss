@@ -3,25 +3,109 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin: 0 40px;
+  a:hover {
+    text-decoration: none;
+  }
   .city-index-card {
     width: 22.5rem;
+    border: 0.5px solid #464655;
+    margin: 20px 5px;
+    color: #464655;
+    transition-duration: 0.5s;
+    box-sizing: content-box !important;
+    position: relative;
+    overflow: hidden;
+    .corner-top-right {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      right: -25px;
+      top: -25px;
+      border: 0.5px solid #464655;
+    }
+    .corner-top-left {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      left: -25px;
+      top: -25px;
+      border: 0.5px solid #464655;
+    }
+    .corner-bottom-right {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      bottom: -25px;
+      right: -25px;
+      border: 0.5px solid #464655;
+    }
+    .corner-bottom-left {
+      width: 50px;
+      height: 50px;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: #CC7178;
+      overflow: hidden;
+      position: absolute;
+      bottom: -25px;
+      left: -25px;
+      border: 0.5px solid #464655;
+    }
     img {
       width: inherit;
+      overflow: hidden;
     }
     .city-index-card-info {
       width: inherit;
+      text-align: center;
+      padding: 30px 0px;
+      background: white;
+      overflow: hidden;
+      p {
+        margin-bottom: 0;
+      }
     }
   }
+}
+.city-index-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 15px 5px;
 }
 
 .cities-banner-card {
   width: 400px;
   margin: auto;
-  color: black;
+  color: #464655;
   background: #E2EBE4;
-  border: 2px solid black;
+  border: 2px solid #464655;
   text-align: center;
     h1 {
-      font-size: 50px
+      font-size: 50px;
+      font-weight: bolder;
     }
 }
