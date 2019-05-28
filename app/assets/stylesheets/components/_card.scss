@@ -5,23 +5,32 @@
   align-items: flex-start;
   .city-index-card {
     width: 22.5rem;
+    border: 0.5px solid #464655;
+    margin: 20px 0px;
+    color: #464655;
     img {
       width: inherit;
     }
     .city-index-card-info {
       width: inherit;
+      text-align: center;
     }
   }
+}
+.city-index-card:hover {
+  text-decoration: none;
+  color: #464655;
 }
 
 .cities-banner-card {
   width: 400px;
   margin: auto;
-  color: black;
+  color: #464655;
   background: #E2EBE4;
-  border: 2px solid black;
+  border: 2px solid #464655;
   text-align: center;
     h1 {
-      font-size: 50px
+      font-size: 50px;
+      font-weight: bolder;
     }
 }
