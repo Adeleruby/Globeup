@@ -1,4 +1,5 @@
 class City < ApplicationRecord
+  include PgSearch
   has_many :user
   has_many :event, dependent: :destroy
   validates :name, presence: true
