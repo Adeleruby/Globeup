@@ -7,4 +7,10 @@ class City < ApplicationRecord
   mount_uploader :card_photo, PhotoUploader
   mount_uploader :cover_photo, PhotoUploader
 
+  pg_search_scope :search_by_name_and_country_name,
+    against: [ :name, :country_name ],
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end
