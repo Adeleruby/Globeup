@@ -1,0 +1,92 @@
+.uis-input{
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 0;
+
+  border-top: none;
+  border-bottom: 2px solid transparent;
+  border-left: none;
+  border-right: none;
+
+  padding: 0 ;
+  background: transparent;
+  color: #89023E;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+
+  height: 40px;
+
+  margin: 0;
+  border-radius: 0;
+
+  vertical-align: middle;
+  display: inline-block;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.uis-input:focus{
+  outline: none;
+}
+
+.uis-input::-ms-clear {
+    display: none;
+}
+
+/*
+ * Show the overflow in Edge
+ */
+
+.uis-input{
+  overflow: visible;
+}
+
+/*
+ * Remove default style in iOS.
+ */
+.uis-input{
+  -webkit-appearance: none;
+}
+
+/* Icons
+ ============================== */
+.uis-form-wrapper{
+  position: relative;
+  width: 200px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.uis-form-icon{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotateY(0deg);
+  color: #89023E;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.uis-form-icon.uis-active{
+  transform: rotateY(90deg);
+}
+
+
+.uis-input:focus.uis-active{
+  width: 100%;
+  border-color: #89023E;
+}
+
+
+/* Pointer
+ ============================== */
+.uis-point{
+  cursor: pointer;
+}
