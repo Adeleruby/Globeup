@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :cities, only: [:show, :index] do
     resources :events, only: [:new, :create]
+    resources :city_guides, only: [:index]
   end
   resources :users, only: [:show]
   resources :events, only: [:show, :edit, :destroy] do
