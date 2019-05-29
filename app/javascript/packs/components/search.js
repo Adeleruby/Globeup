@@ -17,12 +17,12 @@ const results = document.getElementById("results");
 const form = document.querySelector('.uis-input');
 
 const apiCall = (query) => {
-  fetch(`http://localhost:3000/api/v1/cities/${query}`)
+  fetch(`http://localhost:3000/api/cities/${query}`)
     .then(response => response.json())
     .then((data) => {
-      data.words.forEach((result) => {
-        const word = `<li>${result}</li>`;
-        results.insertAdjacentHTML("beforeend", word);
+      data.forEach((result) => {
+        const city = `<li>${result.name}</li>`;
+        results.insertAdjacentHTML("beforeend", city);
       });
     });
 };
