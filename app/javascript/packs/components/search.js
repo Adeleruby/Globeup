@@ -17,7 +17,7 @@ const results = document.getElementById("results");
 const form = document.querySelector('.uis-input');
 
 const apiCall = (query) => {
-  fetch(`http://localhost:3000/api/cities/${query}`)
+  fetch(`/api/cities/${query}`)
     .then(response => response.json())
     .then((data) => {
       data.forEach((result) => {
