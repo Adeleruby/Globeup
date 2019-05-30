@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_05_28_165649) do
 
   # These are extensions that must be enabled in order to support this database
@@ -31,6 +32,13 @@ ActiveRecord::Schema.define(version: 2019_05_28_165649) do
     t.string "country_name"
     t.string "card_photo"
     t.string "cover_photo"
+  end
+
+  create_table "city_guides", force: :cascade do |t|
+    t.bigint "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_city_guides_on_city_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -91,6 +99,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_165649) do
 
   add_foreign_key "attendees", "events"
   add_foreign_key "attendees", "users"
+  add_foreign_key "city_guides", "cities"
   add_foreign_key "events", "cities"
   add_foreign_key "events", "users"
   add_foreign_key "interests", "users"
