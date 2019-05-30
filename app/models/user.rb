@@ -7,6 +7,7 @@ class User < ApplicationRecord
   mount_uploader :cover_photo, PhotoUploader
 
   has_many :interests
+  has_many :user_interests
 
   belongs_to :current_location, foreign_key: 'current_location_id', class_name: 'City'
   belongs_to :from, foreign_key: 'from_id', class_name: 'City'

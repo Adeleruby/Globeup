@@ -38,10 +38,15 @@
           <p>No members yet</p>
         <% end %>
       </div>
+
       <div class="cities-banner-card">
-        <h2> Trending interests near you in <%= @city.name %> </h2>
+        <h2> Trending interests near you in <%= @city.name %></h2>
+        <% @trending_interests.each do |trending| %>
+          <p><%= trending.category %></p>
+        <% end %>
       </div>
-      <di v>
+
+      <div>
         <h2> Insider tips </h2>
         <p> City guide <br> Blog articles <br> Practical information </p>
       </div>

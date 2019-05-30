@@ -17,21 +17,23 @@ const results = document.getElementById("results");
 const form = document.querySelector('.uis-input');
 
 const apiCall = (query) => {
-  fetch(`http://localhost:3000/api/cities/${query}`)
+  fetch(`/api/cities/${query}`)
     .then(response => response.json())
     .then((data) => {
       data.forEach((result) => {
-        const city = `<li>${result.name}</li>`;
+        const city = `<li> <i class="far fa-building"></i> <a href="/cities/${result.id}"> ${result.name}</a></li>`;
         results.insertAdjacentHTML("beforeend", city);
       });
     });
 };
 
+const list = document.querySelector(".d-none")
 
 const eventListen = (query) => {
   form.addEventListener("keyup", (event) => {
   results.innerHTML = "";
   apiCall(event.currentTarget.value);
+  list.classList.remove("d-none")
   });
 };
 
