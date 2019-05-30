@@ -13,4 +13,8 @@ class City < ApplicationRecord
       tsearch: { prefix: true }
     }
 
+
+  def search_name
+    name.downcase.split.join("_")
+  end
 end

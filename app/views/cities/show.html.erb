@@ -14,8 +14,8 @@
                 <%= cl_image_tag yo.photo, height: 266, width: 300, crop: :fill %>
                 <div class="card-info">
                   <%= link_to event_path(yo) do %>
-                    <h2> yo.name </h2>
-                    <% end %>
+                    <h2><%= yo.name %></h2>
+                  <% end %>
                   <p><%= yo.location %></p>
                   <p><%= yo.description %></p>
                   <p><%= yo.category %></p>
@@ -24,7 +24,6 @@
               </div>
           <% end %>
         </div>
-        <%= link_to "See more events", city_events_path(@city), class: "btn btn-flat banner-button", id: "cityevents" %>
       </div>
       <div>
         <% if @display_users.any? %>
@@ -42,6 +41,7 @@
       </div>
 
 <%= link_to "Create your own event!", new_city_event_path(@city), class:"btnpurple" %>
+
       <div class="cities-banner-card">
         <h2> Trending interests near you in <%= @city.name %></h2>
         <% @trending_interests.each do |trending| %>
@@ -50,8 +50,9 @@
       </div>
 
       <div>
-        <h2> Insider tips </h2>
-        <p> City guide <br> Blog articles <br> Practical information </p>
+        <br>
+        <h2> Insider tips </h2> <br>
+        <p> <%= link_to "City guide", city_city_guides_path(@city), class:"btnpurple"%> <br><br> <div class="btnpurple"> Blog articles </div><br> <div class="btnpurple"> Useful tips </p> </div> <br>
       </div>
     </div>
   </div>
