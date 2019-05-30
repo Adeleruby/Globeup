@@ -2,6 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 
 class CityGuidesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     url = "https://www.free-city-guides.com/paris/"
     @descriptions = []
