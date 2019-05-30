@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+UserInterest.destroy_all
+Interest.destroy_all
+User.destroy_all
+
 require 'faker'
 puts "Destroying cities"
 City.destroy_all
@@ -20,11 +24,11 @@ puts "Creating cities"
 end
 
 puts "Destroying Interests"
-Interest.destroy_all
+
+
 puts "Choose your Interests"
-interest = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
-interest.each do |category|
+interests = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
+interests.each do |category|
   interest = Interest.new( category: category )
   interest.save!
-
 end
