@@ -29,7 +29,7 @@
           <% @display_users.each do |person| %>
             <%= link_to user_path(person) do %>
               <div class="avatar-square">
-                <%= cl_image_tag person.photo, height: 50, width: 50, crop: :fill %>
+                <%= cl_image_tag person.profile_pic, height: 50, width: 50, crop: :fill %>
               </div>
             <% end %>
           <% end %>
