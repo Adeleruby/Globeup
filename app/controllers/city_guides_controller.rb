@@ -4,8 +4,8 @@ require 'nokogiri'
 class CityGuidesController < ApplicationController
   def index
     @city = City.find(params[:city_id])
-    # url = "https://www.free-city-guides.com/#{@city.name}/"
-    url = "https://www.free-city-guides.com/#{@city.name}/"
+    url = "https://www.free-city-guides.com/#{@city.search_name}/"
+    # url = "https://www.free-city-guides.com/new_york/"
 
     @descriptions = []
     html_file = open(url).read
