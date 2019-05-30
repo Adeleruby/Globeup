@@ -4,7 +4,10 @@ require 'nokogiri'
 class CityGuidesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    url = "https://www.free-city-guides.com/paris/"
+    @city = City.find(params[:city_id])
+    url = "https://www.free-city-guides.com/#{@city.search_name}/"
+    # url = "https://www.free-city-guides.com/new_york/"
+
     @descriptions = []
     html_file = open(url).read
     html_doc = Nokogiri::HTML(html_file)
