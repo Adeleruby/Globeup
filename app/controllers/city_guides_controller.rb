@@ -3,7 +3,10 @@ require 'nokogiri'
 
 class CityGuidesController < ApplicationController
   def index
-    url = "https://www.free-city-guides.com/paris/"
+    @city = City.find(params[:city_id])
+    # url = "https://www.free-city-guides.com/#{@city.name}/"
+    url = "https://www.free-city-guides.com/#{@city.name}/"
+
     @descriptions = []
     html_file = open(url).read
     html_doc = Nokogiri::HTML(html_file)

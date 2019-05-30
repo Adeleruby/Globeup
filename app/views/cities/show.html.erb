@@ -12,8 +12,8 @@
                 <%= cl_image_tag yo.photo, height: 266, width: 300, crop: :fill %>
                 <div class="card-info">
                   <%= link_to event_path(yo) do %>
-                    <h2> yo.name </h2>
-                    <% end %>
+                    <h2><%= yo.name %></h2>
+                  <% end %>
                   <p><%= yo.location %></p>
                   <p><%= yo.description %></p>
                   <p><%= yo.category %></p>
@@ -48,7 +48,7 @@
 
       <div>
         <h2> Insider tips </h2>
-        <p> City guide <br> Blog articles <br> Practical information </p>
+        <p> <%= link_to "CITY GUIDE", city_city_guides_path(@city) %>City guide <br> Blog articles <br> Practical information </p>
       </div>
     </div>
   </div>
