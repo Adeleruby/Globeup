@@ -16,8 +16,10 @@
 # UserInterest.destroy_all
 # puts "Destroying Interests"
 # Interest.destroy_all
-
-
+puts "destroying events"
+Event.destroy_all
+puts "destroying interests"
+Interest.destroy_all
 puts "destroying users"
 User.destroy_all
 puts "destroying cities"
@@ -119,6 +121,7 @@ interests.each do |category|
   interest.save!
 end
 
+puts "creating events"
 tech_lunch = Event.new(
   name: "Tech Lunch",
   location: "Le Wagon London",
@@ -129,8 +132,6 @@ tech_lunch = Event.new(
   )
   tech_lunch.remote_photo_url = "https://cdn.evoke.ie/wp-content/uploads/2018/08/23180904/coffee-feat-696x503.jpg"
   tech_lunch.save!
-
-
 newbies = Event.new(
   name: "Newbies in Paris",
   location: "Louvre Paris",
@@ -141,7 +142,6 @@ newbies = Event.new(
   )
   newbies.remote_photo_url = "http://www.whcm.org/wp-content/uploads/whcm-networking-casual.jpg"
   newbies.save!
-
 bloggers = Event.new(
   name: "Fashion Blogger Connect",
   location: "Le Marais Paris",
@@ -152,7 +152,6 @@ bloggers = Event.new(
   )
   bloggers.remote_photo_url = "https://3.bp.blogspot.com/-bfok0VO60BQ/Wq69mPmy6KI/AAAAAAAAK4E/SA6ZGptagnQlaRXxYR0swVfGkevecHXwQCLcBGAs/s1600/paris-fw18-street-style-day2-tyler-joe-105-1520018002.jpg"
   bloggers.save!
-
  yoga = Event.new(
   name: "Yogis in Paris",
   location: "Jardin des Tuileries",
@@ -163,6 +162,7 @@ bloggers = Event.new(
   )
   yoga.remote_photo_url = "https://www.discoverwalks.com/blog/wp-content/uploads/2018/12/yoga1.jpg"
   yoga.save!
+
 
 # class Event < ApplicationRecord
 #   belongs_to :city
