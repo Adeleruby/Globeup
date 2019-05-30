@@ -1,29 +1,24 @@
 <div class="text-center">
-  <br>
-  <br>
+    <div class= "background-size: cover">
+    <%= cl_image_tag @user.cover_photo, class: "banner-photo" %>
+    </div>
   <h1 style="color: #464655;"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
 </div>
-<br>
-<br>
 <div class="text-center">
 <div class="cards-container">
+  <%= cl_image_tag @user.profile_pic, class: "avatar-user"%>
     <%= link_to user_path(@user) do %>
-      <div class="card">
-        <%= cl_image_tag @user.profile_pic, height: 266, width: 300, crop: :fill %>
-        <%= cl_image_tag @user.cover_photo, height: 266, width: 300, crop: :fill %>
-        <div class="card-info">
-          <%= cl_image_tag @user.profile_pic, class: "avatar-large", height: 60, width: 60, crop: :fill %>
-        </div>
-        <div>
+      <div class="card" id="user-page">
+
           <%#= link_to "Message", PATH TO WRITE, class: "btn-flat" %>
           <p>Living now in <%= @user.current_location.name %></p>
           <p>Originally from <%= @user.from.name %></p>
           <p>Moving to <%= @user.moving_to.name%></p>
-        </div>
       </div>
     <% end %>
 </div>
 
+<br>
 <div class="justify-content-center">
   <h2>Background & Interests</h2>
   <% @user.interests.each do |interest| %>
