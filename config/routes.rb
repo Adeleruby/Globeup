@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations'}
+  get '/about', to: 'pages#about'
   resources :cities, only: [:show, :index] do
     resources :events, only: [:new, :create]
     resources :city_guides, only: [:index]

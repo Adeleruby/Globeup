@@ -1,12 +1,10 @@
-<div class="maincontainer">
-  <div class="maintext">
-    <h1>Women connecting with women across the world</h1>
-    <h3>Welcome to GlobeUp, a community space for women to find their tribe anywhere in the world</h3>
-    <div class="maincontainerbtns">
-      <p class="btnpurple" style="margin-right: 20px;">Join Us</p>
-      <p class="btntransparent" style="margin-left: 20px;">Sign Up</p>
-    </div>
-  </div>
+    <div class="maincontainer">
+      <div class="maintext">
+        <h1>Women connecting with women across the world</h1>
+        <h3>Welcome to GlobeUp, a community space for women to find their tribe anywhere in the world</h3>
+        <div class="maincontainerbtns">
+          <%= link_to "GlobeUp", about_path, class:"btnpurple" %>
+          <%= link_to "Sign Up", new_user_registration_path, class:"btntransparent" %>
 
   <div class="mainimage">
     <%= image_tag('mainphoto.png', alt: 'GlobeUp Girls')%>
