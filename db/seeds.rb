@@ -131,6 +131,39 @@ tech_lunch = Event.new(
   tech_lunch.save!
 
 
+newbies = Event.new(
+  name: "Newbies in Paris",
+  location: "Louvre Paris",
+  category: "Networking",
+  description: "Drinks with the latest girls in town - welcome!",
+  user: ella,
+  city: paris,
+  )
+  newbies.remote_photo_url = "http://www.whcm.org/wp-content/uploads/whcm-networking-casual.jpg"
+  newbies.save!
+
+bloggers = Event.new(
+  name: "Fashion Blogger Connect",
+  location: "Le Marais Paris",
+  category: "Fashion",
+  description: "Join other Fashion Bloggers in Paris",
+  user: ella,
+  city: paris,
+  )
+  bloggers.remote_photo_url = "https://3.bp.blogspot.com/-bfok0VO60BQ/Wq69mPmy6KI/AAAAAAAAK4E/SA6ZGptagnQlaRXxYR0swVfGkevecHXwQCLcBGAs/s1600/paris-fw18-street-style-day2-tyler-joe-105-1520018002.jpg"
+  bloggers.save!
+
+ yoga = Event.new(
+  name: "Yogis in Paris",
+  location: "Jardin des Tuileries",
+  category: "Yoga",
+  description: "Vinyasa flow with us at the Tuileries",
+  user: ella,
+  city: paris,
+  )
+  yoga.remote_photo_url = "https://www.discoverwalks.com/blog/wp-content/uploads/2018/12/yoga1.jpg"
+  yoga.save!
+
 # class Event < ApplicationRecord
 #   belongs_to :city
 #   belongs_to :user
