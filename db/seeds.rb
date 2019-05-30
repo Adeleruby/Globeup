@@ -18,8 +18,8 @@
 # Interest.destroy_all
 
 
-
-
+puts "destroying users"
+User.destroy_all
 puts "destroying cities"
 City.destroy_all
 puts "creating cities"
