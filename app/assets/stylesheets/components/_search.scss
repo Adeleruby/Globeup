@@ -33,6 +33,7 @@
     display: none;
 }
 
+
 /*
  * Show the overflow in Edge
  */
@@ -55,6 +56,9 @@
   width: 200px;
   margin: auto;
   padding-bottom: 30px;
+  i {
+    font-size: 28px;
+  }
 }
 
 .uis-form-icon{
@@ -90,3 +94,22 @@
 .uis-point{
   cursor: pointer;
 }
+
+
+#results {
+  position: absolute;
+  width: 400px;
+  background: white;
+  list-style-type: none;
+  padding-left: 0;
+  margin: auto;
+  bottom: -100px;
+  left: -1px;
+  a {
+    text-decoration: none;
+  }
+}
+
+
+
+

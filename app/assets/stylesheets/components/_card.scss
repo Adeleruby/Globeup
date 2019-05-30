@@ -101,12 +101,15 @@
   width: 400px;
   margin: auto;
   color: #464655;
-  background: #E2EBE4;
+  background: white;
   border: 2px solid #464655;
   text-align: center;
   align-items: center;
+  padding: 10px;
+  position: relative;
     h1 {
       font-size: 50px;
       font-weight: bolder;
+      padding: 10px 0px;
     }
 }
