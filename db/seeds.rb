@@ -5,21 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# CityGuide.destroy_all
+# Events.destroy_all
+# City.destroy_all
 
 
 
 
-puts "Destroying UsersInterests"
-UserInterest.destroy_all
-puts "Destroying Interests"
-Interest.destroy_all
+# puts "Destroying UsersInterests"
+# UserInterest.destroy_all
+# puts "Destroying Interests"
+# Interest.destroy_all
 
-puts "Creating Interests"
-interests = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
-interests.each do |category|
-  interest = Interest.new( category: category )
-  interest.save!
-end
+
 
 
 puts "destroying cities"
@@ -110,6 +108,39 @@ sicily = City.new(
   )
 sicily.remote_card_photo_url = "https://images.unsplash.com/photo-1523365154888-8a758819b722?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80"
 sicily.save!
+
+ella = User.create!(email: "ella@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+
+
+puts "Creating Interests"
+interests = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
+interests.each do |category|
+  interest = Interest.new( category: category, user: ella )
+  interest.save!
+end
+
+tech_lunch = Event.new(
+  name: "Tech Lunch",
+  location: "Le Wagon London",
+  category: "Tech",
+  description: "Lunch with women in Tech",
+  user: ella,
+  city: rio,
+  )
+  tech_lunch.remote_photo_url = "https://cdn.evoke.ie/wp-content/uploads/2018/08/23180904/coffee-feat-696x503.jpg"
+  tech_lunch.save!
+
+
+# class Event < ApplicationRecord
+#   belongs_to :city
+#   belongs_to :user
+#   has_many :attendee
+#   validates :name, presence: true
+#   validates :location, presence: true
+#   validates :category, presence: true
+#   validates :description, presence: true
+#   mount_uploader :photo, PhotoUploader
+# end
 
 
 
