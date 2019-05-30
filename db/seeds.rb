@@ -12,14 +12,12 @@
 
 
 
-# puts "Destroying UsersInterests"
-# UserInterest.destroy_all
-# puts "Destroying Interests"
-# Interest.destroy_all
-puts "destroying events"
-Event.destroy_all
+puts "Destroying UsersInterests"
+UserInterest.destroy_all
 puts "destroying interests"
 Interest.destroy_all
+puts "destroying events"
+Event.destroy_all
 puts "destroying users"
 User.destroy_all
 puts "destroying cities"
