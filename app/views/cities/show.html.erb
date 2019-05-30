@@ -1,7 +1,9 @@
 <div class="show-container">
   <div class="top-show-container">
     <div class="city-photo">
+      <div class= "row justify-content-center">
       <%= cl_image_tag @city.cover_photo, height: 400, width: 600, crop: :fill %>
+      </div>
     </div>
     <div class="title-box">
       <h2> Events near you in <%= @city.name %> </h2>
@@ -37,7 +39,9 @@
           <p>No members yet</p>
         <% end %>
       </div>
-      <%= link_to "See more events", city_events_path(@city), class:"btnpurple", id: "cityevents" %> <br> <br>
+
+<%= link_to "Create your own event!", new_city_event_path(@city), class:"btnpurple" %>
+
       <div class="cities-banner-card">
         <h2> Trending interests near you in <%= @city.name %></h2>
         <% @trending_interests.each do |trending| %>
