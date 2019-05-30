@@ -41,16 +41,9 @@
 
       <div class="cities-banner-card">
         <h2> Trending interests near you in <%= @city.name %></h2>
-        <% @user_interests.each do |ui| %>
-        <p><%= ui.interest.category%></p>
-          <% array = [] %>
-          <% array << ui.interest.category %>
-          <% array.count.max_by(5) %>
+        <% @trending_interests.each do |trending| %>
+          <p><%= trending.category %></p>
         <% end %>
-
-
-
-
       </div>
 
       <div>
