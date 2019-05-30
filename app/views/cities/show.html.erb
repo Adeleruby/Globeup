@@ -22,7 +22,6 @@
               </div>
           <% end %>
         </div>
-        <%= link_to "See more events", city_events_path(@city), class:"btnpurple", id: "cityevents" %> <br> <br>
       </div>
       <div>
         <% if @display_users.any? %>
@@ -38,7 +37,7 @@
           <p>No members yet</p>
         <% end %>
       </div>
-
+      <%= link_to "See more events", city_events_path(@city), class:"btnpurple", id: "cityevents" %> <br> <br>
       <div class="cities-banner-card">
         <h2> Trending interests near you in <%= @city.name %></h2>
         <% @trending_interests.each do |trending| %>
@@ -48,8 +47,8 @@
 
       <div>
         <br>
-        <h2> Insider tips </h2>
-        <p> <%= link_to "City guide", city_city_guides_path(@city), class:"btnpurple" %> <br><br> Blog articles <br> Practical information </p>
+        <h2> Insider tips </h2> <br>
+        <p> <%= link_to "City guide", city_city_guides_path(@city), class:"btnpurple"%> <br><br> <div class="btnpurple"> Blog articles </div><br> <div class="btnpurple"> Useful tips </p> </div> <br>
       </div>
     </div>
   </div>
