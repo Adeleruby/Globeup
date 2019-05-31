@@ -19,7 +19,7 @@
                   <p><%= yo.location %></p>
                   <p><%= yo.description %></p>
                   <p><%= yo.category %></p>
-                  <%= cl_image_tag yo.user.profile_pic, class: "avatar-bordered user", height: 60, width: 60, crop: :fill %>
+                  <%= cl_image_tag yo.owner.profile_pic, class: "avatar-bordered user", height: 60, width: 60, crop: :fill %>
                 </div>
               </div>
           <% end %>

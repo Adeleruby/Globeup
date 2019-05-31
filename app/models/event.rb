@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :city
-  belongs_to :user
+  belongs_to :owner, foreign_key: :owner_id, class_name: "User"
   has_many :users, through: :attendees
   validates :name, presence: true
   validates :location, presence: true
