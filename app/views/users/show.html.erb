@@ -7,15 +7,12 @@
 <div class="text-center">
 <div class="cards-container">
   <%= cl_image_tag @user.profile_pic, class: "avatar-user"%>
-    <%= link_to user_path(@user) do %>
       <div class="card" id="user-page">
-
           <%#= link_to "Message", PATH TO WRITE, class: "btn-flat" %>
-          <p>Living now in <%= @user.current_location.name %></p>
-          <p>Originally from <%= @user.from.name %></p>
-          <p>Moving to <%= @user.moving_to.name%></p>
+            <p>Living now in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
+            <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
+            <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
       </div>
-    <% end %>
 </div>
 
 <br>
