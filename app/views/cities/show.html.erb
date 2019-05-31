@@ -25,16 +25,26 @@
               <h2><%= yo.name %></h2>
             <% end %>
             <p><%= yo.location %></p>
-            <p><%= yo.description %></p>
-            <p><%= yo.category %></p>
+            <div class=details-link>
+              <a href="#">Details</a>
+            </div>
           </div>
         </div>
       <% end %>
     </div>
 
+<div class="create-btn">
+  <%= link_to "Create Event!", new_city_event_path(@city), class:"btnpurple" %>
+</div>
+<br>
+<br>
+<br>
+<br>
+
     <div class="member-display">
         <% if @display_users.any? %>
             <h2> Women in <%= @city.name %> </h2>
+            <div class="member-row">
             <% @display_users.each do |person| %>
               <%= link_to user_path(person) do %>
                 <div class="avatar-square">
@@ -45,11 +55,9 @@
           <% else %>
             <p>No members yet</p>
           <% end %>
+          </div>
     </div>
 
-<div class="create-btn">
-  <%= link_to "Create your own event!", new_city_event_path(@city), class:"btnpurple" %>
-</div>
 
 
       <div class="cities-banner-card">

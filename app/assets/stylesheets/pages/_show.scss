@@ -16,19 +16,21 @@
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   background-color: #EEF7F0;
 }
 
 .card {
   width: 350px;
-  height: 400px;
+  height: 300px;
   background-color: #FBF1EC;
 }
 
 .card-info {
   margin-top: 20px;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .card-info a {
@@ -36,14 +38,41 @@
   color: #89023E;
 }
 
+.card-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.details-link {
+  border-bottom: 2px solid #464655;
+  width: 55px;
+  margin: -10px auto 10px;
+}
+
+
 .member-display {
     margin-left: 50px;
     margin-bottom: 50px;
     margin-top: 30px;
 }
 
+.member-row {
+  display: flex;
+  justify-content: space-between;
+}
+
 .create-btn {
   text-align: center;
+    margin-top: -60px;
+    justify-content: flex-end;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.create-btn .btnpurple {
+  margin-right: 0px;
+  width: 200px;
 }
 
 .card-img {
