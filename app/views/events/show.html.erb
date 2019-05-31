@@ -1,34 +1,24 @@
-<div class="show-container">
-  <div class="top-show-container">
-    <div class="title-box">
-      <div class="event-photo">
-        <%= cl_image_tag @event.photo, height: 400, width: 600, crop: :fill %>
-      </div>
-      <h2> <%= @event.name %> </h2>
-      <strong> Details </strong>
-      <p>Venue: <%= @event.location.capitalize %></p>
-      <p> <%= @event.description %> </p>
-      <p><%= @event.category %></p>
-      <p> Starts at <%= @event.starts.strftime("%I:%M%p") %> </p>
-      <p> Ends at <%= @event.ends.strftime("%I:%M%p") %> </p>
-    </div>
-
-      <p>Organized by <%= @event.user.email %></p>
-      <p><%= cl_image_tag @event.user.profile_pic, class: "avatar-bordered show-avatar", height: 60, width: 60, crop: :fill %></p>
-      </div>
-    </div>
-   <div>
-      <p> Members in attendance </p>
-      <% @attendees.each do |person| %>
-      <div class="user-photo">
-        <%= cl_image_tag person.photo, height: 400, width: 600, crop: :fill %>
-      </div>
-      <% end %>
-    <div class="show-info">
+<%= cl_image_tag @event.photo, height: 400, width: 600, crop: :fill %>
+<div>
+  <h2> <%= @event.name %> </h2>
+  <strong> Details </strong>
+  <p>Venue: <%= @event.location.capitalize %></p>
+  <p> <%= @event.description %> </p>
+  <p><%= @event.category %></p>
+  <p> Starts at <%= @event.starts.strftime("%I:%M%p") %> </p>
+  <p> Ends at <%= @event.ends.strftime("%I:%M%p") %> </p>
+  <p>Organized by <%= @event.owner.first_name %></p>
+  <p><%= cl_image_tag @event.owner.profile_pic, class: "avatar-bordered show-avatar", height: 60, width: 60, crop: :fill %></p>
 </div>
-<div class="container">
-  <% unless @event.user == current_user %>
-    <%= link_to "Register for this event!", event_attendees_path(@event), class: 'button-show' %>
+<div>
+  <p> Members in attendance </p>
+  <% @attendees.each do |person| %>
+    <div class="user-photo">
+      <%= cl_image_tag person.user.profile_pic, height: 40, width: 40, crop: :fill %>
+    </div>
+  <% end %>
+  <% unless @event.owner == current_user %>
+    <%= link_to "Register for this event!", event_attendees_path(@event), class: 'button-show', :method => :post %>
     <% end %>
 </div>
 
@@ -37,7 +27,7 @@
 
 <div class="d-flex justify-content-around">
 
-  <% if @event.user == current_user %>
+  <% if @event.owner == current_user %>
     <%= link_to "Edit your event", edit_event_path(@event), class: "btn btn-flat banner-button" %>
 
   <%= link_to "Delete your event", event_path(@event), class: "btn btn-flat banner-button", :method => :delete %>

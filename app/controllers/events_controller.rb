@@ -18,7 +18,7 @@ class EventsController < ApplicationController
     @city = City.find(params[:city_id])
     @event = Event.new(event_params)
     @event.city = @city
-    @event.user = current_user
+    @event.owner = current_user
     if @event.save
       redirect_to event_path(@event)
     else
