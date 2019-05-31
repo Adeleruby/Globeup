@@ -1,9 +1,14 @@
+<div class="container">
+  <div class="card-index-container" id="cityguide">
+  <% @descriptions.each do |x| %>
+  <p> <%= x %> </p>
+  <% end %>
+  </div>
+<div id="cityguidebutton">
+  <%= link_to "See more cities", cities_path, class:"btnpurple" %>
+</div>
+</div>
 
-<% @descriptions.each do |x| %>
-<p> <%= x %> </p>
-<% end %>
-
-<%= link_to "See more cities", cities_path, class:"btnpurple" %>
 
 <br>
 <br>

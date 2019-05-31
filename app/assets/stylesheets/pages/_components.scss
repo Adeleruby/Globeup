@@ -71,3 +71,21 @@ div.btnpurple {
   margin-top: 20px;
 }
 
+#cityguide {
+  position: relative;
+  padding-top: 15px;
+  justify-content: space-around;
+  padding-bottom: 15px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+#cityguidebutton {
+  position: center;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
