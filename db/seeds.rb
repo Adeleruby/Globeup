@@ -10,8 +10,8 @@
 # City.destroy_all
 
 
-
-
+puts "Destroying Attendees"
+Attendee.destroy_all
 puts "Destroying UsersInterests"
 UserInterest.destroy_all
 puts "destroying interests"
@@ -109,14 +109,14 @@ sicily = City.new(
 sicily.remote_card_photo_url = "https://images.unsplash.com/photo-1523365154888-8a758819b722?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80"
 sicily.save!
 
-ella = User.create!(email: "ella@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
-nicola = User.create!(email: "nicola@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
-alexa = User.create!(email: "alexa@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
-maria = User.create!(email: "maria@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
-anna = User.create!(email: "anna@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
-ruby = User.create!(email: "ruby@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
-katrina = User.create!(email: "katrina@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
-erica = User.create!(email: "erica@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+ella = User.create!(email: "ella@gmail.com", password: "123123", first_name: "Ella", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+nicola = User.create!(email: "nicola@gmail.com", password: "123123", first_name: "nicola", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+alexa = User.create!(email: "alexa@gmail.com", password: "123123", first_name: "alexa", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+maria = User.create!(email: "maria@gmail.com", password: "123123", first_name: "maria", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+anna = User.create!(email: "anna@gmail.com", password: "123123", first_name: "Anna", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+ruby = User.create!(email: "ruby@gmail.com", password: "123123", first_name: "Ruby", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+katrina = User.create!(email: "katrina@gmail.com", password: "123123", first_name: "Katrina", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+erica = User.create!(email: "erica@gmail.com", password: "123123", first_name: "Erica", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
 
 
 puts "Creating Interests"
@@ -132,7 +132,7 @@ tech_lunch = Event.new(
   location: "Le Wagon London",
   category: "Tech",
   description: "Lunch with women in Tech",
-  user: ella,
+  owner: ella,
   city: rio,
   )
   tech_lunch.remote_photo_url = "https://cdn.evoke.ie/wp-content/uploads/2018/08/23180904/coffee-feat-696x503.jpg"
@@ -142,7 +142,7 @@ newbies = Event.new(
   location: "Louvre Paris",
   category: "Networking",
   description: "Drinks with the latest girls in town - welcome!",
-  user: nicola,
+  owner: nicola,
   city: paris,
   )
   newbies.remote_photo_url = "http://www.whcm.org/wp-content/uploads/whcm-networking-casual.jpg"
@@ -152,7 +152,7 @@ bloggers = Event.new(
   location: "Le Marais Paris",
   category: "Fashion",
   description: "Join other Fashion Bloggers in Paris",
-  user: maria,
+  owner: maria,
   city: paris,
   )
   bloggers.remote_photo_url = "https://3.bp.blogspot.com/-bfok0VO60BQ/Wq69mPmy6KI/AAAAAAAAK4E/SA6ZGptagnQlaRXxYR0swVfGkevecHXwQCLcBGAs/s1600/paris-fw18-street-style-day2-tyler-joe-105-1520018002.jpg"
@@ -162,7 +162,7 @@ bloggers = Event.new(
   location: "Jardin des Tuileries",
   category: "Yoga",
   description: "Vinyasa flow with us at the Tuileries",
-  user: ella,
+  owner: ella,
   city: paris,
   )
   yoga.remote_photo_url = "https://www.discoverwalks.com/blog/wp-content/uploads/2018/12/yoga1.jpg"
