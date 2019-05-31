@@ -10,6 +10,9 @@
 # City.destroy_all
 
 
+
+
+
 puts "Destroying Attendees"
 Attendee.destroy_all
 puts "Destroying UsersInterests"
