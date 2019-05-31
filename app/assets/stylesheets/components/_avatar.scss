@@ -26,3 +26,17 @@
   height: 30vh;
   margin-bottom: 15px;
 }
+
+.small-avatar-square {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.large-avatar-square {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 3px;
+}
