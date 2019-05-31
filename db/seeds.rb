@@ -110,6 +110,13 @@ sicily.remote_card_photo_url = "https://images.unsplash.com/photo-1523365154888-
 sicily.save!
 
 ella = User.create!(email: "ella@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+nicola = User.create!(email: "nicola@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+alexa = User.create!(email: "alexa@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+maria = User.create!(email: "maria@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+anna = User.create!(email: "anna@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+ruby = User.create!(email: "ruby@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+katrina = User.create!(email: "katrina@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
+erica = User.create!(email: "erica@gmail.com", password: "123123", current_location: paris, from: paris, moving_to: rio)
 
 
 puts "Creating Interests"
@@ -135,7 +142,7 @@ newbies = Event.new(
   location: "Louvre Paris",
   category: "Networking",
   description: "Drinks with the latest girls in town - welcome!",
-  user: ella,
+  user: nicola,
   city: paris,
   )
   newbies.remote_photo_url = "http://www.whcm.org/wp-content/uploads/whcm-networking-casual.jpg"
@@ -145,7 +152,7 @@ bloggers = Event.new(
   location: "Le Marais Paris",
   category: "Fashion",
   description: "Join other Fashion Bloggers in Paris",
-  user: ella,
+  user: maria,
   city: paris,
   )
   bloggers.remote_photo_url = "https://3.bp.blogspot.com/-bfok0VO60BQ/Wq69mPmy6KI/AAAAAAAAK4E/SA6ZGptagnQlaRXxYR0swVfGkevecHXwQCLcBGAs/s1600/paris-fw18-street-style-day2-tyler-joe-105-1520018002.jpg"
