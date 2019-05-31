@@ -8,6 +8,10 @@ class User < ApplicationRecord
 
   has_many :interests
   has_many :user_interests
+  has_many :attendees, class_name: "Attendee", foreign_key: :attendee_id, dependent: :destroy
+  has_many :events, through: :attendees, dependent: :destroy
+  has_many :events, class_name: "Event", foreign_key: :owner_id, dependent: :destroy
+
 
   belongs_to :current_location, foreign_key: 'current_location_id', class_name: 'City'
   belongs_to :from, foreign_key: 'from_id', class_name: 'City'
