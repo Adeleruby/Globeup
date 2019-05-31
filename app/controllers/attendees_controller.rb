@@ -1,9 +1,11 @@
 class AttendeesController < ApplicationController
-
   def create
     @event = Event.find(params[:event_id])
-    @attendee = Attendee.new(attendee_params)
+    @user = current_user
+    @attendee = Attendee.new
+    # (attendee_params)
     @attendee.event = @event
+    @attendee.user = @user
     if @attendee.save
       redirect_to event_path(@event)
     else
@@ -20,7 +22,8 @@ class AttendeesController < ApplicationController
   private
 
   def attendee_params
-    params.require(:attendee).permit(:user_id, :event_id, :created_at, :updated_at)
+    # params.require(:attendee).permit(:attendee_id, :event_id, :created_at, :updated_at)
+    params.require(:attendee).permit(:attendee_id, :event_id, :created_at, :updated_at)
 
   end
 
