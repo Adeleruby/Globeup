@@ -10,3 +10,54 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.accordion:hover .accordion-item:hover .accordion-item-content,
+.accordion .accordion-item--default .accordion-item-content {
+    height: auto;
+    display: flex;
+}
+
+.accordion-item-content,
+.accordion:hover .accordion-item-content  {
+    height: 0;
+
+    position: absolute;
+    left: 0;
+    background: white;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 25px 150px;
+    overflow: hidden;
+    transition: height .25s;
+}
+
+/* Aesthetic */
+body {
+  background: #222;
+}
+
+.accordion {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    font-family: "PT Sans" sans-serif
+}
+
+.accordion .accordion-item {
+  padding: 1em;
+  color: #CC7178;
+}
+
+.accordion h1 {
+  margin: 0;
+}
+
+
+.accordion .accordion-item:nth-child(1) {
+  background-color: white;
+
+}
+
+
