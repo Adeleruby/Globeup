@@ -14,8 +14,7 @@
 
 puts "Destroying UsersInterests"
 UserInterest.destroy_all
-# puts "Destroying Interests"
-# Interest.destroy_all
+
 puts "destroying interests"
 Interest.destroy_all
 puts "destroying events"
