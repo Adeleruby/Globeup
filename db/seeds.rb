@@ -112,15 +112,55 @@ sicily = City.new(
 sicily.remote_card_photo_url = "https://images.unsplash.com/photo-1523365154888-8a758819b722?ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80"
 sicily.save!
 
-ella = User.create!(email: "ella@gmail.com", password: "123123", first_name: "Ella", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
-nicola = User.create!(email: "nicola@gmail.com", password: "123123", first_name: "nicola", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
-alexa = User.create!(email: "alexa@gmail.com", password: "123123", first_name: "alexa", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
-maria = User.create!(email: "maria@gmail.com", password: "123123", first_name: "maria", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
-anna = User.create!(email: "anna@gmail.com", password: "123123", first_name: "Anna", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
-ruby = User.create!(email: "ruby@gmail.com", password: "123123", first_name: "Ruby", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
-katrina = User.create!(email: "katrina@gmail.com", password: "123123", first_name: "Katrina", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
-erica = User.create!(email: "erica@gmail.com", password: "123123", first_name: "Erica", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+puts "Creating Users"
 
+ella = User.create!(email: "ella@gmail.com", password: "123123", first_name: "Ella", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+ella.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316069/Ella_libfjs.jpg"
+ella.save!
+ella.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+ella.save!
+
+nicola = User.create!(email: "nicola@gmail.com", password: "123123", first_name: "nicola", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+nicola.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316889/nicola_om2p8t.jpg"
+nicola.save!
+nicola.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+nicola.save!
+
+alexa = User.create!(email: "alexa@gmail.com", password: "123123", first_name: "alexa", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+alexa.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316748/alexa_zuaili.jpg"
+alexa.save!
+alexa.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+alexa.save!
+
+maria = User.create!(email: "maria@gmail.com", password: "123123", first_name: "maria", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+maria.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316683/maria_fmptgi.jpg"
+maria.save!
+maria.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+maria.save!
+
+anna = User.create!(email: "anna@gmail.com", password: "123123", first_name: "Anna", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+anna.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316624/anna_qhty1e.jpg"
+anna.save!
+anna.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+anna.save!
+
+ruby = User.create!(email: "ruby@gmail.com", password: "123123", first_name: "Ruby", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+ruby.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316576/ruby_bz8noa.jpg"
+ruby.save!
+ruby.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+ruby.save!
+
+katrina = User.create!(email: "katrina@gmail.com", password: "123123", first_name: "Katrina", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+katrina.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316513/katrina_fpl5ct.jpg"
+katrina.save!
+katrina.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+katrina.save!
+
+erica = User.create!(email: "erica@gmail.com", password: "123123", first_name: "Erica", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
+erica.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316434/erica_y49kjv.jpg"
+erica.save!
+erica.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
+erica.save!
 
 puts "Creating Interests"
 interests = ["Tech Girls","Foodies","Book Club","Adventurers","Travels","Cinema","Music","Sporty"]
