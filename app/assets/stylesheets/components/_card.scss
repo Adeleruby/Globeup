@@ -78,7 +78,9 @@
     }
     img {
       width: inherit;
-      overflow: hidden;
+      // overflow: hidden;
+      height: 220px;
+      object-fit: cover;
     }
     .city-index-card-info {
       width: inherit;
