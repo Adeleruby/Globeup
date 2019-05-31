@@ -58,7 +58,7 @@ width: 700px;
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
   background-color: #EEF7F0;
 }
 
@@ -94,19 +94,27 @@ width: 700px;
 
 .member-display {
     margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 50px;
     margin-top: 30px;
+}
+
+.member-display h2 {
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  color: #464655;
 }
 
 .member-row {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
 .create-btn {
   text-align: center;
-    margin-top: -60px;
-    justify-content: flex-end;
+    margin-top: -80px;
+    justify-content: center;
     display: flex;
     margin-left: 100px;
     margin-right: 100px;

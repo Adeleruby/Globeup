@@ -31,9 +31,10 @@
 }
 
 .mainimage img {
-  margin-top:70px;
-  width:530px;
-  margin-right: 100px;
+  margin-top: 50px;
+  width: 500px;
+  margin-right: 80px;
+  border-radius: 5px;
 }
 
 .maincontainerbtns {
@@ -48,17 +49,6 @@
   object-fit: cover;
   height: 400px;
 }
-
-// .citiesrow {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr 1fr;
-//   grid-gap: 16px;
-//   margin-top: 60px;
-//   margin-left: 60px;
-//   margin-right: 60px;
-//   margin-bottom: 60px;
-
-// }
 
 .inner {
   padding: 6px;
@@ -119,7 +109,8 @@
   font-weight: bold;
   margin-left: 50px;
   padding-top: 10px;
-  font-size: 60px;
+  padding-bottom: 20px;
+  font-size: 40px;
 }
 
 .whitebox {
