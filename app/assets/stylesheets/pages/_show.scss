@@ -1,0 +1,53 @@
+.city-photo {
+  margin-top : 20px;
+}
+
+.title-box {
+  text-align: center;
+  margin-top: 50px;
+  background-color: #EEF7F0;
+  margin-bottom: -40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #EEF7F0;
+}
+
+.card {
+  width: 350px;
+  height: 400px;
+  background-color: #FBF1EC;
+}
+
+.card-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-info a {
+  text-decoration: none;
+  color: #89023E;
+}
+
+.member-display {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.create-btn {
+  text-align: center;
+}
+
+.card-img {
+  height: 200px;
+  background-size: cover;
+}
+
