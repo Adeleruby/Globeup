@@ -37,20 +37,16 @@
     </div>
 
     <div class="cards-container">
-
-
-      <% @display_events.each do |yo| %>
-
+      <% @display_events.each do |event| %>
         <div class="card">
-          <div class="card-img" style="background-image: url('<%= cl_image_path yo.photo, height: 266, width: 300 %>');">
-          </div>
+          <%= cl_image_tag event.photo %>
           <div class="card-info">
-            <%= link_to event_path(yo) do %>
-              <h2><%= yo.name %></h2>
-            <% end %>
-            <p><%= yo.location %></p>
+            <h2><%= event.name %></h2>
+            <p><%= event.location %></p>
             <div class=details-link>
-              <a href="#">Details</a>
+              <%= link_to event_path(event) do %>
+                <p>Deatils</p>
+              <% end %>
             </div>
           </div>
         </div>
