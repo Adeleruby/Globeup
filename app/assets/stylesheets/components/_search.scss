@@ -101,12 +101,24 @@
   width: 400px;
   background: white;
   list-style-type: none;
-  padding-left: 0;
-  margin: auto;
+  padding-left: 98px;
+  text-align: left;
+  // margin: auto;
+  border: 2px solid #464655;
+  border-top: 0;
   // bottom: -100px;
-  left: -1px;
+  left: -2px;
   a {
+    color: #464655;
     text-decoration: none;
+  }
+  li {
+    margin: 2px 0px;
+  }
+  i {
+    font-size: 20px;
+    font-weight: light;
+    margin-right: 4px;
   }
 }
 
