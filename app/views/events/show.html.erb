@@ -8,13 +8,17 @@
   <p> Starts at <%= @event.starts.strftime("%I:%M%p") %> </p>
   <p> Ends at <%= @event.ends.strftime("%I:%M%p") %> </p>
   <p>Organized by <%= @event.owner.first_name %></p>
-  <p><%= cl_image_tag @event.owner.profile_pic, class: "large-avatar-square" %></p>
+  <%= link_to user_path(@event.owner) do %>
+    <%= cl_image_tag @event.owner.profile_pic, class: "large-avatar-square" %>
+  <% end %>
 </div>
 <div>
   <p> Members in attendance </p>
   <% @attendees.each do |person| %>
     <div class="user-photo">
-      <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
+      <%= link_to user_path(person) do %>
+        <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
+      <% end %>
     </div>
   <% end %>
   <% unless @event.owner == current_user %>
