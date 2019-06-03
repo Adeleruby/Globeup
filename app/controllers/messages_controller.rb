@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   def create
+    raise
     @message = Message.new(message_params)
     @chat_room = ChatRoom.find(params[:chat_room_id])
     @message.chat_room = @chat_room
