@@ -1,80 +1,75 @@
 <div class="show-container">
-    <div class="top-show-container">
-      <div class="city-photo">
-        <div class="city-box">
-        <%= cl_image_tag @city.card_photo, crop: :fill %>
-        </div>
+  <div class="top-show-container">
+    <div class="city-photo">
+      <div class="city-box">
+      <%= cl_image_tag @city.card_photo, crop: :fill %>
       </div>
-
-      <div class="city-side-bar">
-        <div class="sidebar-item">
-          <img src="https://data.whicdn.com/images/87626042/large.png">
-          <%= link_to "City Guide", city_city_guides_path(@city) %>
-        </div>
-        <div class="sidebar-item">
-          <img src="https://images.unsplash.com/photo-1552334949-3dcfaf514919?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
-          <a href="">Members in <%="#{@city.name}"%></a>
-        </div>
-       <div class="sidebar-item">
-          <img src="https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80" alt="">
-          <a href="">Trending interests in <%="#{@city.name}"%></a>
-        </div>
-        <div class="sidebar-item">
-          <img src="https://images.unsplash.com/photo-1554998171-706e730d721d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">
-          <a href="">Popular Events in <%="#{@city.name}"%></a>
-        </div>
-        <div class="sidebar-item">
-          <img src="https://images.unsplash.com/photo-1501554728187-ce583db33af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
-          <a href="">Top Things in <%="#{@city.name}"%></a>
-        </div>
-      </div>
-
     </div>
 
-    <div class="title-box">
-      <h2> Events near you in <%= @city.name %> </h2>
-      <p><%= @city.country_name %></p>
+    <div class="city-side-bar">
+      <div class="sidebar-item">
+        <img src="https://data.whicdn.com/images/87626042/large.png">
+        <%= link_to "City Guide", city_city_guides_path(@city) %>
+      </div>
+      <div class="sidebar-item">
+        <img src="https://images.unsplash.com/photo-1552334949-3dcfaf514919?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
+        <a href="">Members in <%="#{@city.name}"%></a>
+      </div>
+     <div class="sidebar-item">
+        <img src="https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1650&q=80" alt="">
+        <a href="">Trending interests in <%="#{@city.name}"%></a>
+      </div>
+      <div class="sidebar-item">
+        <img src="https://images.unsplash.com/photo-1554998171-706e730d721d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="">
+        <a href="">Popular Events in <%="#{@city.name}"%></a>
+      </div>
+      <div class="sidebar-item">
+        <img src="https://images.unsplash.com/photo-1501554728187-ce583db33af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" alt="">
+        <a href="">Top Things in <%="#{@city.name}"%></a>
+      </div>
     </div>
+  </div>
+
+   <div class="title-box">
+    <h2> Events near you in <%= @city.name %> </h2>
+    <p><%= @city.country_name %></p>
+  </div>
 
     <div class="cards-container">
-
-
-      <% @display_events.each do |yo| %>
-
+      <% @display_events.each do |event| %>
         <div class="card">
-          <div class="card-img" style="background-image: url('<%= cl_image_path yo.photo, height: 266, width: 300 %>');">
-          </div>
+          <%= cl_image_tag event.photo %>
           <div class="card-info">
-            <%= link_to event_path(yo) do %>
-              <h2><%= yo.name %></h2>
-            <% end %>
-            <p><%= yo.location %></p>
+            <h2><%= event.name %></h2>
+            <p><%= event.location %></p>
             <div class=details-link>
-              <a href="#">Details</a>
+              <%= link_to event_path(event) do %>
+                <p>Details</p>
+              <% end %>
             </div>
           </div>
         </div>
-      <% end %>
-    </div>
+       <% end %>
+  </div>
 
-<div class="create-btn">
-  <%= link_to "Create Event!", new_city_event_path(@city), class:"btnpurple" %>
+  <div class="create-btn">
+    <%= link_to "Create Event!", new_city_event_path(@city), class:"btnpurple" %>
+  </div>
 </div>
 <br>
 
-    <div class="member-display">
-        <% if @display_users.any? %>
-            <h2> Women in <%= @city.name %> </h2>
-            <div class="member-row">
-            <% @display_users.each do |person| %>
-              <%= link_to user_path(person) do %>
-                <%= cl_image_tag person.profile_pic, class:"large-avatar-square" %>
-              <% end %>
-            <% end %>
-          <% else %>
-            <p>No members yet</p>
-          <% end %>
-          </div>
+<div class="member-display">
+  <% if @display_users.any? %>
+    <h2> Women in <%= @city.name %> </h2>
+    <div class="member-row scrolling-wrapper-flexbox">
+    <% @display_users.each do |person| %>
+      <%= link_to user_path(person) do %>
+        <%= cl_image_tag person.profile_pic, class:"large-avatar-square user-image-scroll" %>
+      <% end %>
+    <% end %>
     </div>
-
+  <% else %>
+    <p>No members yet</p>
+  <% end %>
 </div>
+

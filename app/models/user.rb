@@ -6,6 +6,8 @@ class User < ApplicationRecord
   mount_uploader :profile_pic, PhotoUploader
   mount_uploader :cover_photo, PhotoUploader
 
+  has_many :messages, dependent: :destroy
+
   has_many :interests
   has_many :user_interests
   has_many :attendees, class_name: "Attendee", foreign_key: :attendee_id, dependent: :destroy

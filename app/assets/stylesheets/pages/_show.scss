@@ -66,10 +66,15 @@ width: 700px;
   width: 350px;
   height: 300px;
   background-color: #FBF1EC;
+  img {
+    height: 180px;
+    width: inherit;
+    object-fit: cover;
+  }
 }
 
 .card-info {
-  margin-top: 20px;
+  padding: 15px 0px 8px 0px;
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
@@ -88,7 +93,13 @@ width: 700px;
 .details-link {
   border-bottom: 2px solid #464655;
   width: 55px;
-  margin: -10px auto 10px;
+  margin: auto;
+  a:hover {
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 0px;
+  }
 }
 
 
@@ -125,8 +136,46 @@ width: 700px;
   width: 200px;
 }
 
-.card-img {
-  height: 200px;
-  background-size: cover;
+// .card-img {
+//   height: 180px;
+//   background-size: cover;
+// }
+
+.auth-container {
+  width: 90%;
+  max-width: 465px;
+  background-color: #fff;
+  margin: 20px auto;
+  height: 100%;
+  padding: 50px 10px;
+
+}
+.t-h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  box-sizing: border-box;
 }
 
+input:-webkit-autofill {
+   background-color: white !important;
+}
+
+.form-control {
+   background-color: white !important;
+}
+
+.form-control:focus {
+   background-color: white !important;
+}
+
+
+
+input:-internal-autofill-selected {
+   background-color: white !important;
+}
+
+input#user_email.form-control.string.email.optional {
+   background-color: white !important;
+}
