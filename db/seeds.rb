@@ -177,6 +177,8 @@ tech_lunch = Event.new(
   description: "Lunch with women in Tech",
   owner: ella,
   city: rio,
+  starts: DateTime.strptime("09/01/20019 17:00", "%m/%d/%Y %H:%M"),
+  ends: DateTime.strptime("09/01/20019 20:00", "%m/%d/%Y %H:%M")
   )
   tech_lunch.remote_photo_url = "https://cdn.evoke.ie/wp-content/uploads/2018/08/23180904/coffee-feat-696x503.jpg"
   tech_lunch.save!
@@ -187,6 +189,8 @@ newbies = Event.new(
   description: "Drinks with the latest girls in town - welcome!",
   owner: nicola,
   city: paris,
+  starts: DateTime.strptime("09/07/20019 17:00", "%m/%d/%Y %H:%M"),
+  ends: DateTime.strptime("09/07/20019 20:00", "%m/%d/%Y %H:%M")
   )
   newbies.remote_photo_url = "http://www.whcm.org/wp-content/uploads/whcm-networking-casual.jpg"
   newbies.save!
@@ -197,6 +201,8 @@ bloggers = Event.new(
   description: "Join other Fashion Bloggers in Paris",
   owner: maria,
   city: paris,
+  starts: DateTime.strptime("09/08/20019 18:00", "%m/%d/%Y %H:%M"),
+  ends: DateTime.strptime("09/08/20019 22:00", "%m/%d/%Y %H:%M")
   )
   bloggers.remote_photo_url = "https://3.bp.blogspot.com/-bfok0VO60BQ/Wq69mPmy6KI/AAAAAAAAK4E/SA6ZGptagnQlaRXxYR0swVfGkevecHXwQCLcBGAs/s1600/paris-fw18-street-style-day2-tyler-joe-105-1520018002.jpg"
   bloggers.save!
@@ -207,6 +213,8 @@ bloggers = Event.new(
   description: "Vinyasa flow with us at the Tuileries",
   owner: ella,
   city: paris,
+  starts: DateTime.strptime("10/10/20019 17:00", "%m/%d/%Y %H:%M"),
+  ends: DateTime.strptime("10/10/20019 19:00", "%m/%d/%Y %H:%M")
   )
   yoga.remote_photo_url = "https://www.discoverwalks.com/blog/wp-content/uploads/2018/12/yoga1.jpg"
   yoga.save!
