@@ -9,10 +9,9 @@
   </div>
   <div class="mid-nav">
     <div class="accordion">
-    <section class="accordion-item">
+    <section class="<%= params[:controller] == 'pages' && params[:action] == 'home' ? 'accordion-item' : 'globeup' %>">
         <h1><a href="/" class="mid-logo">GlobeUp</a></h1>
         <div class="accordion-item-content">
-
            <p>The female plateform made for you to meet all the girls around you and create meaningful relationships 💁👭 Did you just move to a new city and feel a bit lonely ? GlobeUp is here for you. Our 4 founders have already experienced starting a new adventure in a new environment and not having anyone to share it with at first.</p>
         </div>
     </section>
