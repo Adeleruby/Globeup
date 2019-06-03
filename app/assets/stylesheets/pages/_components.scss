@@ -26,8 +26,8 @@ p {
   border-radius: 10px;
   background-color: #89023E;
   color: #FBF1EC;
-  padding: 14px 28px;
-  font-size: 16px;
+  padding: 13px 20px;
+  font-size: 15px;
   cursor: pointer;
   width: 120px;
   text-align: center;
@@ -46,14 +46,15 @@ div.btnpurple {
   color: #89023E;
   border-radius: 10px;
   border: 2px solid #89023E;
+  text-decoration: none;
 }
 
 .btntransparent {
   border-radius: 10px;
   background-color: #FBF1EC;
   color: #89023E;
-  padding: 14px 28px;
-  font-size: 16px;
+  padding: 13px 20px;
+  font-size: 15px;
   cursor: pointer;
   width: 120px;
   text-align: center;
@@ -65,6 +66,7 @@ div.btnpurple {
   color: #89023E;
   border-radius: 10px;
   border: 2px solid #89023E;
+  text-decoration: none;
 }
 
 
@@ -90,5 +92,42 @@ div.btnpurple {
   display: flex;
   align-items: center;
   margin: 5px;
+}
+
+.btnpink{
+  border-radius: 10px;
+  background-color: #CC7178;
+  color: white;
+  padding: 5px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+div.btnpink {
+  width: 100px;
+  height:48px;
+  padding-left: 5px;
+  padding-right: 5px;
+  align-items: center;
+}
+
+.btnpink:hover {
+  background-color: #CC7178;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid #89023E;
+  text-decoration: none;
+}
+
+.btn-link {
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+
 }
 

@@ -10,7 +10,7 @@
   </div>
   <div class="mid-nav">
     <div class="accordion">
-    <section class="accordion-item">
+    <section class=<%= current_page?(controller: 'pages', action: 'home')? "accordion-item" : "globeup"  %>>
         <h1><a href="/" class="mid-logo">GlobeUp</a></h1>
         <div class="accordion-item-content">
 

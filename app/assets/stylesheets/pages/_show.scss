@@ -141,3 +141,41 @@ width: 700px;
 //   background-size: cover;
 // }
 
+.auth-container {
+  width: 90%;
+  max-width: 465px;
+  background-color: #fff;
+  margin: 20px auto;
+  height: 100%;
+  padding: 50px 10px;
+
+}
+.t-h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+input:-webkit-autofill {
+   background-color: white !important;
+}
+
+.form-control {
+   background-color: white !important;
+}
+
+.form-control:focus {
+   background-color: white !important;
+}
+
+
+
+input:-internal-autofill-selected {
+   background-color: white !important;
+}
+
+input#user_email.form-control.string.email.optional {
+   background-color: white !important;
+}

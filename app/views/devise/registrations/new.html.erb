@@ -1,4 +1,7 @@
-<h2>Sign up</h2>
+<div class="auth-container">
+  <div class= "row justify-content-center">
+  <h2 class="t-h3" >Sign up</h2>
+  </div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -34,11 +37,15 @@
                 required: false %>
   </div>
 
-  <div class="form-actions">
+<div class="row justify-content-center ">
+  <div class="form-actions btnpink">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
+
+ </div>
 
 
