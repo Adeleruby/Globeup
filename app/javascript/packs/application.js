@@ -3,7 +3,10 @@ import 'select2/dist/css/select2.css';
 import { initSelect2 } from './components/init_select2';
 import { search } from './components/search';
 import { eventListen } from './components/search';
+import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
+import { initMapbox } from './components/init_mapbox';
 
+initMapbox();
 initSelect2();
 search();
 eventListen();
