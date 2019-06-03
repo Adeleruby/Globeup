@@ -84,8 +84,8 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-config.action_cable.url = "ws://www.globeup.top/cable"
-config.action_cable.allowed_request_origins = [ "http://www.globeup.top", "https://www.globeup.top" ]
+config.action_cable.url = "ws://www.globeup.co/cable"
+config.action_cable.allowed_request_origins = [ "http://www.globeup.co", "https://www.globeup.co" ]
 
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
