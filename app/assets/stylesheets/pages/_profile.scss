@@ -1,0 +1,39 @@
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    background-color: #EEF7F0;
+
+}
+
+.profile-name {
+  background-color: #EEF7F0;
+  display: flex;
+  justify-content: center;
+}
+
+.text-center {
+  background-color: #EEF7F0;
+}
+
+.about-section {
+  width: 500px;
+  border: 2px solid black;
+  background-color: #FBF1EC;
+}
+
+ .about2 {
+    width: 500px;
+    height: 300px;
+    background-color: #FBF1EC;
+    border: 2px solid black;
+}
+
+.chatbtn {
+  display: flex;
+  justify-content: center;
+}

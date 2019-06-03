@@ -1,18 +1,27 @@
 <div class="text-center">
-    <div class= "background-size: cover">
+    <div class= "background-size: cover" style="background-color: #EEF7F0;">
     <%= cl_image_tag @user.cover_photo, class: "banner-photo" %>
+     <%= cl_image_tag @user.profile_pic, class: "avatar-user"%>
     </div>
-  <h1 style="color: #464655;"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
 </div>
-<div class="text-center">
-<div class="cards-container">
-  <%= cl_image_tag @user.profile_pic, class: "avatar-user"%>
-      <div class="card" id="user-page">
+
+<div class="profile-name">
+    <h1 style="color: #464655;"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
+  </div>
+<div class="profile-container">
+  <div class="about-section">
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate debitis, veniam tempora eaque voluptas dolor natus rerum veritatis culpa inventore reprehenderit laboriosam, odio, fugiat eum velit harum repudiandae porro impedit.
+    </p>
+  </div>
+  <div class="about2" id="user-page">
           <%#= link_to "Message", PATH TO WRITE, class: "btn-flat" %>
-            <p>Living now in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
-            <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
-            <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
-      </div>
+    <p>Living now in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
+    <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
+    <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
+    <div class="chatbtn">
+      <a href="#" class=btnpurple style="width: 250px">Message <%=@user.first_name.capitalize%></a>
+    </div>
+  </div>
 </div>
 
 <br>
