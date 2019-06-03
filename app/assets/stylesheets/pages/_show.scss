@@ -159,23 +159,21 @@ width: 700px;
 }
 
 input:-webkit-autofill {
-   background-color: white !important;
+   background-color: #FBF1EC !important;
 }
 
 .form-control {
-   background-color: white !important;
+   background-color: #FBF1EC !important;
 }
 
 .form-control:focus {
-   background-color: white !important;
+   background-color: #FBF1EC !important;
 }
 
-
-
 input:-internal-autofill-selected {
-   background-color: white !important;
+   background-color: #FBF1EC !important;
 }
 
 input#user_email.form-control.string.email.optional {
-   background-color: white !important;
+   background-color: #FBF1EC !important;
 }
