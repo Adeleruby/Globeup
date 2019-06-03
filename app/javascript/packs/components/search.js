@@ -21,7 +21,7 @@ const apiCall = (query) => {
     .then(response => response.json())
     .then((data) => {
       data.forEach((result) => {
-        const city = `<li> <i class="far fa-building"></i> <a href="/cities/${result.id}"> ${result.name}</a></li>`;
+        const city = `<li><a href="/cities/${result.id}"> <i class="far fa-building"></i>      ${result.name}, <font size="2">${result.country_name}</font></a></li>`;
         results.insertAdjacentHTML("beforeend", city);
       });
     });
