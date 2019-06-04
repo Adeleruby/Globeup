@@ -18938,9 +18938,7 @@ body {
 
 /* line 27, app/assets/stylesheets/pages/_home.scss */
 .citiescont {
-  padding: 40px 0px;
   background-color: #E2EBE4;
-  width: 100%;
 }
 
 /* line 33, app/assets/stylesheets/pages/_home.scss */
@@ -19008,8 +19006,6 @@ body {
 
 /* line 88, app/assets/stylesheets/pages/_home.scss */
 .citycard h2 {
-  margin: auto;
-  margin-top: 220px;
 }
 
 /* line 94, app/assets/stylesheets/pages/_home.scss */
@@ -19030,9 +19026,6 @@ body {
 /* line 108, app/assets/stylesheets/pages/_home.scss */
 .citiescont h1 {
   font-weight: bold;
-  margin-left: 50px;
-  padding-top: 10px;
-  padding-bottom: 20px;
   font-size: 40px;
 }
 
