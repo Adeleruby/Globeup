@@ -1,6 +1,6 @@
 .banner {
-  height: 500px;
-  margin-bottom: 100px;
+  height: 420px;
+  margin-bottom: 60px;
   background-image: asset-url('women-at-bar.jpg');
   background-repeat: no-repeat;
   // // background-attachment: fixed;
@@ -15,6 +15,7 @@
   height: 500px;
   width: 100%;
   margin-bottom: 100px;
+  object-fit: cover;
 }
 
 .cards-container {

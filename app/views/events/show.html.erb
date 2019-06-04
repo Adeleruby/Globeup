@@ -22,7 +22,7 @@
     </div>
   <% end %>
   <% unless @event.owner == current_user %>
-    <%= link_to "Register for this event!", event_attendees_path(@event), class: 'button-show', :method => :post %>
+    <%= link_to "Register for this event!", event_attendees_path(@event), class: "create-btn", :method => :post %>
     <% end %>
 </div>
 
