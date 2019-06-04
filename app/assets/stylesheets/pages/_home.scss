@@ -18,12 +18,8 @@
 
 }
 
-.maintext h2 {
-  font-family: open-sans;
-}
-
 .maintext h3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Playfair display;
   font-size: 20px;
   padding-top:20px;
   padding-bottom: 10px;
@@ -52,6 +48,9 @@
 
 .maincontainerbtns .btnpurple{
   width: 250px;
+  font-family: Playfair display;
+  font-style: italic;
+  font-size: 18px;
 
 }
 
@@ -231,7 +230,7 @@ body {
   background : none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
   box-shadow : 0 -6px 0 rgba(235, 150, 108, 0.2);
   color : rgba(235, 150, 108, 0.8);
-  font-family : Baskerville, Georgia, serif;
+  font-family : Playfair Display;
   font-style : italic;
   font-size : 28px;
   line-height : 46px;
@@ -252,9 +251,8 @@ body {
   text-transform : uppercase;
 }
 
-cite p {
-  color : #D7AA94;
-  font-style : italic;
+.cite p {
+  color : #D7AA94 !important;
 }
 
 .slick-carousel {
