@@ -110,7 +110,7 @@ sicily.save!
 
 puts "Creating Users"
 
-ella = User.create!(email: "ella@gmail.com", password: "123123", first_name: "Ella", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio, user_interests: Foodies)
+ella = User.create!(email: "ella@gmail.com", password: "123123", first_name: "Ella", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
 ella.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316069/Ella_libfjs.jpg"
 ella.save!
 ella.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"

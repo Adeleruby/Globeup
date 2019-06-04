@@ -5,24 +5,32 @@
 </div>
 
 
-<div class="profile-sidebar">
+<div class="profile-summary">
   <div class="left-content">
       <div class="left-cont">
-      <div>
-        <%= cl_image_tag @user.profile_pic, class: "avatar-member"%>
-      </div>
+        <div>
+          <%= cl_image_tag @user.profile_pic, class: "avatar-member"%>
+        </div>
 
-      <div class="profile-name">
-        <h2 style="color: #464655"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h2>
-      </div>
+        <div class="profile-name">
+          <h2 style="color: #464655"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h2>
+        </div>
 
-      <div class="about2">
-        <p style="padding-top: 10px;">Member since 2019</p>
-        <p>Living in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
-        <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
-        <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
-      </div>
+        <div class="about2">
+          <div class="aboutdiv"><p>Member since 2019</p></div>
+          <div class="aboutdiv"><p>Living in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p></div>
+          <div class="aboutdiv"><p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p></div>
+          <div class="aboutdiv"><p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p></div>
+        </div>
 
+        <div class="col-md-4 col-sm-6 col-xs-12 usersocials">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#" style="background-color: white;"> <i class="fab fa-facebook-f"></i></a></li>
+              <li><a class="twitter" href="#" style="background-color: white;"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="instagram" href="#" style="background-color: white;"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="email" href="#" style="background-color: white;"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
 
     </div>
   </div>
@@ -39,12 +47,15 @@
         <% unless @user == current_user %>
           <%= link_to "Message #{@user.first_name}", chat_rooms_path(:user_id => @user.id), :method => :post %>
         <% end %>
+
+        <a href="#" class=btnpurple style="width: 250px">Chat with <%=@user.first_name.capitalize%></a>
+
       </div>
     </div>
   </div>
 
   <div class="right-content">
-    <h2>Groups in Common</h2>
+    <h2>Interests in Common</h2>
     <div class="groups">
       <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
       <br>
@@ -57,8 +68,31 @@
     </div>
   </div>
 
+</div>
 
+<div class="usereventscont">
+  <div class="userevents">
+    <% if @user == current_user %>
+    <h2> My Events </h2>
+    <% else %>
+    <h2>Events <%=@user.first_name.capitalize%> is attending</h2>
+    <% end %>
+  </div>
+</div>
 
-
-
-
+<div class="cards-container", id="attend">
+      <% @user.events.each do |event| %>
+        <div class="card">
+          <%= cl_image_tag event.photo %>
+          <div class="card-info">
+            <h2><%= event.name %></h2>
+            <p><%= event.location %></p>
+            <div class=details-link>
+              <%= link_to event_path(event) do %>
+                <p>Details</p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+       <% end %>
+  </div>
