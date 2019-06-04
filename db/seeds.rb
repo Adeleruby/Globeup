@@ -27,21 +27,21 @@ paris = City.new(
   name: "Paris",
   country_name: "France",
   )
-paris.remote_card_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1558715593/pexels-photo-262413_yuwyls.jpg"
+paris.remote_card_photo_url = "https://images.unsplash.com/photo-1493707553966-283afac8c358?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
 paris.save!
 
 dubai = City.new(
   name: "Dubai",
   country_name: "United Arab Emirates",
   )
-dubai.remote_card_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1558715593/pexels-photo-262413_yuwyls.jpg"
+dubai.remote_card_photo_url = "https://images.unsplash.com/photo-1465414951857-102134ffaa57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80"
 dubai.save!
 
 singapore = City.new(
   name: "Singapore",
   country_name: "Republic of Singapore",
   )
-singapore.remote_card_photo_url = "https://images.unsplash.com/photo-1465414951857-102134ffaa57?ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
+singapore.remote_card_photo_url = "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1549&q=80"
 singapore.save!
 
 london = City.new(
@@ -55,7 +55,7 @@ new_york = City.new(
   name: "New York",
   country_name: "USA",
   )
-new_york.remote_card_photo_url = "https://images.unsplash.com/photo-1508710985089-e985fabbb184?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2800&q=80"
+new_york.remote_card_photo_url = "https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2320&q=80"
 new_york.save!
 
 hong_kong = City.new(
@@ -110,7 +110,7 @@ sicily.save!
 
 puts "Creating Users"
 
-ella = User.create!(email: "ella@gmail.com", password: "123123", first_name: "Ella", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio, user_interests: Foodies)
+ella = User.create!(email: "ella@gmail.com", password: "123123", first_name: "Ella", last_name: "Wilson", current_location: paris, from: paris, moving_to: rio)
 ella.remote_profile_pic_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559316069/Ella_libfjs.jpg"
 ella.save!
 ella.remote_cover_photo_url = "https://res.cloudinary.com/dtil1nkcr/image/upload/v1559315493/library_cjt9w7.jpg"
