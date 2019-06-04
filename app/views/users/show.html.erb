@@ -35,7 +35,9 @@
         </p>
       </div>
       <div class="chatbtn">
-        <a href="#" class=btnpurple style="width: 250px">Message <%=@user.first_name.capitalize%></a>
+        <% unless @user == current_user %>
+          <%= link_to "Message #{@user.first_name}", chat_rooms_path, :method => :post %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -43,29 +45,18 @@
   <div class="right-content">
     <h2>Groups in Common</h2>
     <div class="groups">
-    <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
-    <br>
-    <a href="#" class="btntransparent" style="width: 200px;">Girls Who Code</a>
-    <br>
-    <a href="#" class="btntransparent" style="width: 200px;">Paris Lovers</a>
-    <br>
-    <a href="#" class="btntransparent" style="width: 200px;">Weekend Getaways</a>
-    <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Girls Who Code</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Paris Lovers</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Weekend Getaways</a>
+      <br>
     </div>
   </div>
-</div>
 
 
-
-
-
-
-</div>
-
-<div>
-<%= link_to "Start Chat", chat_rooms_path, class: "btn btn-flat banner-button", :method => :post %>
-</div>
-</div>
 
 
 
