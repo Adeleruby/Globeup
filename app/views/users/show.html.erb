@@ -8,21 +8,29 @@
 <div class="profile-sidebar">
   <div class="left-content">
       <div class="left-cont">
-      <div>
-        <%= cl_image_tag @user.profile_pic, class: "avatar-member"%>
-      </div>
+        <div>
+          <%= cl_image_tag @user.profile_pic, class: "avatar-member"%>
+        </div>
 
-      <div class="profile-name">
-        <h2 style="color: #464655"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h2>
-      </div>
+        <div class="profile-name">
+          <h2 style="color: #464655"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h2>
+        </div>
 
-      <div class="about2">
-        <p style="padding-top: 10px;">Member since 2019</p>
-        <p>Living in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
-        <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
-        <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
-      </div>
+        <div class="about2">
+          <div class="aboutdiv"><p>Member since 2019</p></div>
+          <div class="aboutdiv"><p>Living in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p></div>
+          <div class="aboutdiv"><p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p></div>
+          <div class="aboutdiv"><p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p></div>
+        </div>
 
+        <div class="col-md-4 col-sm-6 col-xs-12 usersocials">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#" style="background-color: white;"> <i class="fab fa-facebook-f"></i></a></li>
+              <li><a class="twitter" href="#" style="background-color: white;"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="instagram" href="#" style="background-color: white;"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="email" href="#" style="background-color: white;"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
 
     </div>
   </div>
@@ -35,7 +43,7 @@
         </p>
       </div>
       <div class="chatbtn">
-        <a href="#" class=btnpurple style="width: 250px">Message <%=@user.first_name.capitalize%></a>
+        <a href="#" class=btnpurple style="width: 250px">Chat with <%=@user.first_name.capitalize%></a>
       </div>
     </div>
   </div>

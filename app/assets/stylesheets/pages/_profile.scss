@@ -1,6 +1,7 @@
 
 .profile-name {
   display: flex;
+  margin-bottom: -10px;
 }
 
 .profile-sidebar {
@@ -9,6 +10,10 @@
   margin-left: 100px;
   background-color: white;
   margin-right: 100px;
+}
+
+.profile-sidebar h2 {
+  padding-bottom: 10px;
 }
 
 .avatar-member {
@@ -25,19 +30,21 @@
 
 .left-content {
   width: 300px;
+  border-right: 1px solid #CC7178;
 }
 
 .left-cont {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+
 }
 
-.about2 p {
+.aboutdiv {
   border-bottom: 1px solid #CC7178;
-  padding-bottom: 10px;
+  width: 200px;
+  padding-top: 10px;
 }
-
 
 
 .text-center {
@@ -46,9 +53,7 @@
 
 
 .middle-content {
-  width: 500px;
-  border-left: 1px solid #CC7178;
-  border-right: 1px solid #CC7178;
+  width: 600px;
   padding: 20px;
 }
 
@@ -61,12 +66,24 @@
 
 .right-content {
   padding: 20px;
+  border-left: 1px solid #CC7178;
+
 }
-
-
 
 .profiledetails {
   width: 100px;
   border: 2px solid black;
   background-color: #FBF1EC;
+}
+
+.chatbtn {
+ margin-top: 40px;
+}
+
+
+.usersocials .social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
 }
