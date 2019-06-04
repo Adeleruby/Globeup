@@ -7,7 +7,9 @@ class AttendeesController < ApplicationController
     @attendee.event = @event
     @attendee.user = @user
     if @attendee.save
+      flash[:alert] = "Your have successfully signed up for our event!"
       redirect_to event_path(@event)
+
     else
       render :new
     end
