@@ -35,8 +35,9 @@
         </p>
       </div>
       <div class="chatbtn">
+        <%= params[:id] %>
         <% unless @user == current_user %>
-          <%= link_to "Message #{@user.first_name}", chat_rooms_path, :method => :post %>
+          <%= link_to "Message #{@user.first_name}", chat_rooms_path(:user_id => @user.id), :method => :post %>
         <% end %>
       </div>
     </div>

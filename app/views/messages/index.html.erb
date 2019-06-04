@@ -1,17 +1,11 @@
-<div class="chat-index-container ">
-  <div class="chat-tabs">
-    <ul class="list-inline tabs-underlined">
-      <% @chat_room.each do |chat| %>
-        <li class="tab-underlined active">
-          <%= chat.name %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <% @chat_room.each do |chat| %>
+    <div class="tab">
+      <button class="tablinks" onclick='openCity(event, "chat-<%= chat.id %>")'><%= chat.id %></button>
+    </div>
+  <% end %>
   <div class="all-chats">
     <% @chat_room.each do |chat| %>
-      <div class="container">
-        <%= current_user.messages.count %>
+      <div class="container tabcontent" id="chat-<%= chat.id %>">
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
             <div class="chat-header"><h4>#<%= chat.name %></h4></div>
@@ -46,8 +40,35 @@
     <% end %>
   </div>
 </div>
+<script>
+function openCity(evt, chat_id) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(chat_id).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 
-
-
-
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 

@@ -1,6 +1,8 @@
 .tabs-underlined {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  list-style-type: none;
 }
 
 .tabs-underlined .tab-underlined {
@@ -17,5 +19,6 @@
   opacity: 1;
   border-bottom: 3px solid #555555;
 }
+
 
 
