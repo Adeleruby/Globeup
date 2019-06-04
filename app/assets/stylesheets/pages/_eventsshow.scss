@@ -1,0 +1,57 @@
+.eventscontainer {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  display: flex;
+}
+
+.eventsleft {
+  width: 50%;
+}
+
+.eventsright {
+  width: 50%;
+  position: sticky;
+  top: 100px;
+  padding-left: 20px;
+}
+
+.eventdetails h2{
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+.show-map {
+  width: 100%;
+  height: 50vh;
+}
+
+.eventimg {
+  height: 50vh;
+  width: 600px;
+  crop: fill;
+}
+
+.organizerimg {
+  height: 100px;
+    width: 100px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: white 1px solid;
+
+}
+
+.eventsummary {
+  display: flex;
+}
+
+.esleft {
+  width: 150px;
+
+}
+
+.eventcontact {
+  display: flex;
+}

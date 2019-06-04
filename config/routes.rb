@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :city_guides, only: [:index]
   end
   resources :users, only: [:show]
-  resources :events, only: [:show, :edit, :destroy] do
+  resources :events, only: [:show, :edit, :destroy, :index] do
     resources :attendees, only: [:create]
   end
   resources :attendees, only: [:destroy]

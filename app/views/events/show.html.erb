@@ -1,50 +1,111 @@
-<%= cl_image_tag @event.photo, height: 400, width: 600, crop: :fill %>
-<div>
-  <h2> <%= @event.name %> </h2>
-  <strong> Details </strong>
-  <p>Venue: <%= @event.location.capitalize %></p>
-  <p> <%= @event.description %> </p>
-  <p><%= @event.category %></p>
-  <p> Starts at <%= @event.starts.strftime("%I:%M%p") %> </p>
-  <p> Ends at <%= @event.ends.strftime("%I:%M%p") %> </p>
-  <p>Organized by <%= @event.owner.first_name %></p>
-  <%= link_to user_path(@event.owner) do %>
-    <%= cl_image_tag @event.owner.profile_pic, class: "large-avatar-square" %>
-  <% end %>
-</div>
-<div>
-  <p> Members in attendance </p>
-  <% @attendees.each do |person| %>
-    <div class="user-photo">
-      <%= link_to user_path(person) do %>
-        <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
+<div class="eventscontainer">
+
+  <div class="eventsleft">
+
+    <div class="eventdetails">
+      <%= cl_image_tag @event.photo, class: "eventimg"%>
+
+        <h2> <%= @event.name %></h2>
+
+        <div class="eventsummary">
+          <div class="esleft"><p>Venue:</p></div>
+          <div class="esright"><p><%= @event.location.capitalize %></p></div>
+        </div>
+        <div class="eventsummary">
+          <div class="esleft">
+            <div class="esleft"><p>Description:</p></div>
+          </div>
+          <div class="esright">
+            <div><p><%= @event.description %></p></div>
+          </div>
+        </div>
+        <div class="eventsummary">
+
+          <div class="esleft"><p> Starts at:</p></div>
+          <div class="esright"><p> <%= @event.starts.strftime("%A, %d %b %Y %l:%M %p") %> </p></div>
+        </div>
+        <div class="eventsummary">
+          <div class="esleft"><p> Ends at:</p></div>
+          <div class="esright"><p> <%= @event.ends.strftime("%A, %d %b %Y %l:%M %p") %> </p></div>
+        </div>
+        <div class="eventsummary">
+          <div class="esleft"><p>Category:</p></div>
+          <div class="esright"><p><%= @event.category %></p></div>
+        </div>
+
+      <div class="eventsummary">
+        <div class="esleft">
+          <%= link_to user_path(@event.owner) do %>
+            <%= cl_image_tag @event.owner.profile_pic, class: "organizerimg" %>
+          <% end %>
+        </div>
+        <div class="esright">
+          <%= link_to "Contact Organiser", user_path(@event.owner) %>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+  <div class="eventsright">
+
+    <div
+      id="map"
+      class="show-map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+
+    <div>
+      <h2 style="margin-top: 20px; text-align: center"> Members Attending</h2>
+      <% @attendees.each do |person| %>
+        <div class="user-photo">
+          <%= link_to user_path(person) do %>
+            <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
+          <% end %>
+        </div>
       <% end %>
+      <% unless @event.owner == current_user %>
+      <%= link_to "Register for this event!", event_attendees_path(@event), class: "create-btn", :method => :post %>
+      <% end %>
+
     </div>
   <% end %>
   <% unless @event.owner == current_user %>
     <%= link_to "Register for this event!", event_attendees_path(@event), class: "create-btn", :method => :post %>
-    <% end %>
-
-</div>
-
-<br>
-<br>
-
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
-<div class="d-flex justify-content-around">
-
-  <% if @event.owner == current_user %>
-    <%= link_to "Edit your event", edit_event_path(@event), class: "btn btn-flat banner-button" %>
-
-  <%= link_to "Delete your event", event_path(@event), class: "btn btn-flat banner-button", :method => :delete %>
-
-
   <% end %>
+
 </div>
 
+
+
+  </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <div class="d-flex justify-content-around">
+      <% if @event.owner == current_user %>
+        <%= link_to "Edit this event", edit_event_path(@event), class: "btn btn-flat banner-button" %>
+      <%= link_to "Delete this event", event_path(@event), class: "btn btn-flat banner-button", :method => :delete %>
+      <% end %>
+    </div>
+
+
+<div class="moreevents">
+
+</div>
