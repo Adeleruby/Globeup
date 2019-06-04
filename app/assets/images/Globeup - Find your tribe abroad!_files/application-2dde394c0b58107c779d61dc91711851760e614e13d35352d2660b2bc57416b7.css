@@ -18646,7 +18646,6 @@ body {
 /* line 10, app/assets/stylesheets/components/_card.scss */
 .card-index-container .city-index-card {
   width: 22.5rem;
-  border: 0.5px solid #464655;
   margin: 20px 5px;
   color: #464655;
   transition-duration: 0.5s;
@@ -18666,7 +18665,7 @@ body {
   position: absolute;
   right: -25px;
   top: -25px;
-  border: 0.5px solid #464655;
+
 }
 
 /* line 34, app/assets/stylesheets/components/_card.scss */
@@ -18680,7 +18679,7 @@ body {
   position: absolute;
   left: -25px;
   top: -25px;
-  border: 0.5px solid #464655;
+
 }
 
 /* line 49, app/assets/stylesheets/components/_card.scss */
@@ -18694,7 +18693,7 @@ body {
   position: absolute;
   bottom: -25px;
   right: -25px;
-  border: 0.5px solid #464655;
+
 }
 
 /* line 64, app/assets/stylesheets/components/_card.scss */
@@ -18708,7 +18707,7 @@ body {
   position: absolute;
   bottom: -25px;
   left: -25px;
-  border: 0.5px solid #464655;
+
 }
 
 /* line 79, app/assets/stylesheets/components/_card.scss */
@@ -18945,7 +18944,7 @@ body {
 .mainimage img {
   margin-top: 50px;
   width: 500px;
-  margin-right: 80px;
+  margin-right: 110px;
   border-radius: 5px;
 }
 
@@ -19000,8 +18999,8 @@ body {
   border-radius: 5px;
   text-align: center;
   height: 260px;
-  width: 225px;
   position: relative;
+  margin: 0 33px;
 }
 
 /* line 88, app/assets/stylesheets/pages/_home.scss */
@@ -19698,7 +19697,7 @@ div.btnpurple {
 /* line 88, app/assets/stylesheets/pages/_show.scss */
 .details-link {
   border-bottom: 2px solid #464655;
-  width: 55px;
+  width: 56px;
   margin: -10px auto 10px;
 }
 

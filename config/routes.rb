@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :chat_rooms, only: [:show, :new, :create] do
     resources :messages, only: [:create]
   end
+  resources :messages, only: [:index]
 
   get "api/cities/:query", to: "api/v1/cities#search", defaults: { format: 'json' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

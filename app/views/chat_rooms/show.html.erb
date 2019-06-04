@@ -1,4 +1,5 @@
 <div class="container">
+  <%= current_user.messages.count %>
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
       <div class="chat-header"><h4>#<%= @chat_room.name %></h4></div>

@@ -17,7 +17,13 @@
   font-size: 50px;
 
 }
+
+.maintext h2 {
+  font-family: open-sans;
+}
+
 .maintext h3 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   padding-top:20px;
   padding-bottom: 10px;
@@ -31,12 +37,17 @@
 .citiescont h2{
   margin-left: 100px;
   font-weight: bold;
+  font-size: 1.5rem !important;
 }
 .mainimage img {
   margin-top: 50px;
   width: 500px;
   margin-right: 80px;
   border-radius: 5px;
+}
+
+.mainimage {
+  margin-right: 35px;
 }
 
 .maincontainerbtns .btnpurple{
@@ -58,19 +69,22 @@
   text-decoration: none;
 }
 
+
+/* need this because other files not taking it  */
 .l-arr {
   font-size: 30px;
   margin-right: 20px;
   color: white;
-  margin-left: 60px;
 }
 
+/* line 67, app/assets/stylesheets/pages/_home.scss */
 .r-arr {
   font-size: 30px;
   color: white;
-
   margin-left: 20px;
 }
+
+
 .citycard {
   background-size: cover;
   background-position: center;
@@ -82,14 +96,12 @@
   border-radius: 5px;
   text-align: center;
   height: 260px;
-  width: 225px;
   position: relative;
+  margin: 0 33px;
 }
 
 .citycard h2 {
   margin: auto;
-  margin-top: 220px;
-  margin-bottom: 10px;
 }
 
 
@@ -248,6 +260,7 @@ cite p {
 .slick-carousel {
   display: flex;
   align-items: center;
+  margin: 0px 40px;
   margin-top: 30px;
   margin-bottom: 30px;
 }

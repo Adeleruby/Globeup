@@ -17,6 +17,10 @@ class MessagesController < ApplicationController
     end
   end
 
+  def index
+    @chat_room = Message.where(user_id: current_user).map { |msg| msg.chat_room }.uniq
+  end
+
   private
 
   def message_params

@@ -1,0 +1,74 @@
+  <% @chat_room.each do |chat| %>
+    <div class="tab">
+      <button class="tablinks" onclick='openCity(event, "chat-<%= chat.id %>")'><%= chat.id %></button>
+    </div>
+  <% end %>
+  <div class="all-chats">
+    <% @chat_room.each do |chat| %>
+      <div class="container tabcontent" id="chat-<%= chat.id %>">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <div class="chat-header"><h4>#<%= chat.name %></h4></div>
+              <div class="messages">
+                <% chat.messages.each do |message| %>
+                  <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
+                <% end %>
+              </div>
+            <div id="create-message">
+              <%= simple_form_for [ chat, Message.new ], remote: true, html: {autocomplete: "off", id: "form" } do |f| %>
+                <%= f.input :content, label: false %>
+                <%= f.button :submit, class: "btn-primary"  %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% content_for :after_js do %>
+        <script>
+          scrollLastMessageIntoView();
+          App['chat_room_<%= chat.id %>'] = App.cable.subscriptions.create({ channel: 'ChatRoomsChannel', chat_room_id: <%= chat.id %> }, {
+            received: (data) => {
+              if (data.current_user_id !== <%= current_user.id %>) {
+                let messagesContainer = document.querySelector('.messages');
+                messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+                scrollLastMessageIntoView();
+              }
+            }
+          })
+        </script>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<script>
+function openCity(evt, chat_id) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(chat_id).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
