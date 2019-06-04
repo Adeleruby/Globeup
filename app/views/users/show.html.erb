@@ -5,7 +5,7 @@
 </div>
 
 
-<div class="profile-sidebar">
+<div class="profile-summary">
   <div class="left-content">
       <div class="left-cont">
         <div>
@@ -51,30 +51,23 @@
   <div class="right-content">
     <h2>Groups in Common</h2>
     <div class="groups">
-    <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
-    <br>
-    <a href="#" class="btntransparent" style="width: 200px;">Girls Who Code</a>
-    <br>
-    <a href="#" class="btntransparent" style="width: 200px;">Paris Lovers</a>
-    <br>
-    <a href="#" class="btntransparent" style="width: 200px;">Weekend Getaways</a>
-    <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Girls Who Code</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Paris Lovers</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Weekend Getaways</a>
+      <br>
     </div>
   </div>
-</div>
-
-
-
-
-
 
 </div>
 
-<div>
-<%= link_to "Start Chat", chat_rooms_path, class: "btn btn-flat banner-button", :method => :post %>
+<div class="usereventscont">
+  <div class="userevents">
+  <h2>Events <%=@user.first_name.capitalize%> is attending</h2>
+  </div>
 </div>
-</div>
-
-
 
 
