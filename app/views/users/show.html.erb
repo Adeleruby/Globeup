@@ -43,7 +43,13 @@
         </p>
       </div>
       <div class="chatbtn">
+        <%= params[:id] %>
+        <% unless @user == current_user %>
+          <%= link_to "Message #{@user.first_name}", chat_rooms_path(:user_id => @user.id), :method => :post %>
+        <% end %>
+
         <a href="#" class=btnpurple style="width: 250px">Chat with <%=@user.first_name.capitalize%></a>
+
       </div>
     </div>
   </div>

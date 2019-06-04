@@ -6,6 +6,7 @@
   border: 1px solid #ececec;
   border-top: none;
   border-bottom-width: 0;
+  min-height: 400px !important;
   max-height: calc(100vh - 70px - 45px - 61px - 30px);
   overflow: scroll;
 }
@@ -25,11 +26,6 @@
   border-radius: 3px;
   margin: 0 10px;
   padding: 11px 10px 8px 10px;
-}
-.avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
 }
 
 #create-message {
@@ -60,4 +56,13 @@ input.form-control {
   h4 {
     margin: 0;
   }
+}
+
+
+.chat-index-container {
+  width: 100vw;
+  display: flex;
+.all-chats {
+  flex-grow: 1;
+}
 }

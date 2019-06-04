@@ -28,9 +28,17 @@ class ChatRoomsController < ApplicationController
 
   def create
     @user = current_user
-    @new_chat = ChatRoom.new(name: "New Chat")
+    # raise
+    @new_chat = ChatRoom.new(name: "Chat #{User.where(id: params[:user_id]).first.first_name}")
     if @new_chat.save
       redirect_to chat_room_path(@new_chat)
     end
   end
+
+  private
+
+  def chat_params
+      # params.require(:chat_room).permit(:user_id)
+  end
 end
+
