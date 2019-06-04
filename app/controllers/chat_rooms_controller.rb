@@ -28,7 +28,7 @@ class ChatRoomsController < ApplicationController
 
   def create
     @user = current_user
-    @new_chat = ChatRoom.new(name: "New Chat")
+    @new_chat = ChatRoom.new(name: "Hello")
     if @new_chat.save
       redirect_to chat_room_path(@new_chat)
     end

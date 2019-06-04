@@ -9,21 +9,22 @@
   </div>
   <div class="mid-nav">
     <div class="accordion">
-    <section class="<%= params[:controller] == 'pages' && params[:action] == 'home' ? 'accordion-item' : 'globeup' %>">
+      <section class="<%= params[:controller] == 'pages' && params[:action] == 'home' ? 'accordion-item' : 'globeup' %>">
         <h1><a href="/" class="mid-logo">GlobeUp</a></h1>
         <div class="accordion-item-content">
            <p>The female plateform made for you to meet all the girls around you and create meaningful relationships 💁👭 Did you just move to a new city and feel a bit lonely ? GlobeUp is here for you. Our 4 founders have already experienced starting a new adventure in a new environment and not having anyone to share it with at first.</p>
         </div>
-    </section>
-</div>
+      </section>
+    </div>
   </div>
   <div class="rhs-nav">
     <% if !current_user.nil? %>
-    <%= link_to "Logout", destroy_user_session_path, class: 'nav-link', method: :delete %>
-    <%= link_to "My profile", user_path(current_user), class: "" %>
+      <%= link_to "Logout", destroy_user_session_path, class: 'nav-link', method: :delete %>
+      <%= link_to "My profile", user_path(current_user), class: "" %>
+
     <% else %>
-    <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
-    <%= link_to "Sign Up", new_user_session_path, class: "" %>
+      <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
+      <%= link_to "Sign Up", new_user_session_path, class: "" %>
           <!-- <a class="nav-link" href="#">Login</a> -->
     <% end %>
   </div>
@@ -35,4 +36,5 @@
       <%= link_to "Events", new_user_registration_path, class: "" %>
     </div>
   </div>
+</div>
 </div>
