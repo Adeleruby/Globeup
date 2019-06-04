@@ -18,9 +18,12 @@
     <p>Living now in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
     <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
     <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
-    <div class="chatbtn">
-      <a href="#" class=btnpurple style="width: 250px">Message <%=@user.first_name.capitalize%></a>
-    </div>
+    <% unless @user == current_user %>
+      <%= link_to "Message #{@user.first_name}", chat_rooms_path, :method => :post %>
+    <% end %>
+
+
+      <!-- <a href="#" class=btnpurple style="width: 250px">Message <%=@user.first_name.capitalize%></a> -->
   </div>
 </div>
 
@@ -33,8 +36,6 @@
   <h2>About me</h2>
   <p><%= @user.about %></p>
 </div>
-
-<%= link_to "Start Chat", chat_rooms_path, trueclass: "btn btn-flat banner-button", :method => :post %>
 
 
 <div>
