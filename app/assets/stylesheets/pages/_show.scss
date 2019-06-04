@@ -62,6 +62,18 @@ width: 700px;
   background-color: #EEF7F0;
 }
 
+#attend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 120px;
+  background-color: #EEF7F0;
+}
+
+
 .card {
   width: 350px;
   height: 300px;
@@ -92,7 +104,7 @@ width: 700px;
 
 .details-link {
   border-bottom: 2px solid #464655;
-  width: 55px;
+  width: 56px;
   margin: auto;
   a:hover {
     font-weight: bold;
