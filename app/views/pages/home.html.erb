@@ -1,10 +1,10 @@
 <div class="maincontainer">
   <div class="maintext">
     <h1>Women connecting with women across the world</h1>
-    <h3>Welcome to GlobeUp, a community space for women to find their tribe anywhere in the world</h3>
+    <h3>Welcome to GlobeUp - a community designed to help you find your network anywhere in the world</h3>
     <div class="maincontainerbtns">
-      <%= link_to "GlobeUp", about_path, class:"btnpurple" %>
-      <%= link_to "Sign Up", new_user_registration_path, class:"btntransparent" %>
+      <%= link_to "Learn more about GlobeUp", about_path, class:"btnpurple" %>
+      <!-- link_to "Sign Up", new_user_registration_path, class:"btntransparent" %> -->
     </div>
   </div>
 
@@ -15,7 +15,7 @@
 
 
 <div class= "citiescont">
-  <h2>Cities</h2>
+  <h2 style="margin-left: 100px;">Cities</h2>
     <div class="slick-carousel">
     <% @cities.each do |city| %>
       <div class="inner">
