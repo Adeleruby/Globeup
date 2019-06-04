@@ -1,44 +1,63 @@
 <div class="text-center">
-    <div class= "background-size: cover" style="background-color: #EEF7F0;">
-    <%= cl_image_tag @user.cover_photo, class: "banner-photo" %>
-     <%= cl_image_tag @user.profile_pic, class: "avatar-user"%>
+  <div class= "background-size: cover" style="background-color: #FBF1EC;">
+  <%= cl_image_tag @user.cover_photo, class: "banner-photo" %>
+  </div>
+</div>
+
+
+<div class="profile-sidebar">
+  <div class="left-content">
+      <div class="left-cont">
+      <div>
+        <%= cl_image_tag @user.profile_pic, class: "avatar-member"%>
+      </div>
+
+      <div class="profile-name">
+        <h2 style="color: #464655"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h2>
+      </div>
+
+      <div class="about2">
+        <p style="padding-top: 10px;">Member since 2019</p>
+        <p>Living in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
+        <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
+        <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
+      </div>
+
+
     </div>
-</div>
-
-<div class="profile-name">
-    <h1 style="color: #464655;"> <%=@user.first_name.capitalize%> <%=@user.last_name.capitalize%></h1>
   </div>
-<div class="profile-container">
-  <div class="about-section">
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate debitis, veniam tempora eaque voluptas dolor natus rerum veritatis culpa inventore reprehenderit laboriosam, odio, fugiat eum velit harum repudiandae porro impedit.
-    </p>
+
+  <div class="middle-content">
+    <div class="profile-container">
+      <div class="about-section">
+        <h2>About <%=@user.first_name.capitalize%></h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate debitis, veniam tempora eaque voluptas dolor natus rerum veritatis culpa inventore reprehenderit laboriosam, odio, fugiat eum velit harum repudiandae porro impedit.
+        </p>
+      </div>
+      <div class="chatbtn">
+        <% unless @user == current_user %>
+          <%= link_to "Message #{@user.first_name}", chat_rooms_path, :method => :post %>
+        <% end %>
+      </div>
+    </div>
   </div>
-  <div class="about2" id="user-page">
-          <%#= link_to "Message", PATH TO WRITE, class: "btn-flat" %>
-    <p>Living now in <%= link_to "#{@user.current_location.name}", city_path(@user.current_location) %></p>
-    <p>Originally from <%= link_to "#{@user.from.name}", city_path(@user.from) %></p>
-    <p>Moving to <%= link_to "#{@user.moving_to.name}", city_path(@user.moving_to) %></p>
-    <% unless @user == current_user %>
-      <%= link_to "Message #{@user.first_name}", chat_rooms_path, :method => :post %>
-    <% end %>
 
-
-      <!-- <a href="#" class=btnpurple style="width: 250px">Message <%=@user.first_name.capitalize%></a> -->
+  <div class="right-content">
+    <h2>Groups in Common</h2>
+    <div class="groups">
+      <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Girls Who Code</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Paris Lovers</a>
+      <br>
+      <a href="#" class="btntransparent" style="width: 200px;">Weekend Getaways</a>
+      <br>
+    </div>
   </div>
-</div>
-
-<br>
-<div class="justify-content-center">
-  <h2>My interests</h2>
-  <% @user.user_interests.each do |user_interest| %>
-    <p><%= user_interest.interest.category %></p>
-  <% end %>
-  <h2>About me</h2>
-  <p><%= @user.about %></p>
-</div>
 
 
-<div>
-  <!-- <h2>Interests in common</h2> -->
-</div>
+
+
+
 
