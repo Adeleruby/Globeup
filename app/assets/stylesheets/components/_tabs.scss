@@ -20,5 +20,17 @@
   border-bottom: 3px solid #555555;
 }
 
+.tab-avatar {
+  margin: 10px;
+}
+
+.tab-details {
+  text-align: left;
+  font-size: 20px;
+  .last-message {
+    color: #8D8D8D;
+    font-size: 15px;
+  }
+}
 
 
