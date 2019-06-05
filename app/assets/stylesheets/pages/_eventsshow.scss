@@ -6,20 +6,21 @@
 }
 
 .eventsleft {
-  width: 50%;
+  width: 60%;
 }
 
 .eventsright {
   width: 50%;
   position: sticky;
   top: 100px;
-  padding-left: 20px;
+  padding-left: 116px;
 }
 
 .eventdetails h2{
   font-family: 'Playfair Display', serif;
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 
 }
 
@@ -30,8 +31,9 @@
 
 .eventimg {
   height: 50vh;
-  width: 600px;
+  width: 629px;
   crop: fill;
+  object-fit: cover;
 }
 
 .organizerimg {
@@ -39,7 +41,7 @@
     width: 100px;
     -o-object-fit: cover;
     object-fit: cover;
-    border: white 1px solid;
+    border: white 11px solid;
 
 }
 
@@ -50,6 +52,10 @@
 .esleft {
   width: 150px;
 
+}
+
+.esleft p {
+  padding-left: 10px;
 }
 
 .eventcontact {
