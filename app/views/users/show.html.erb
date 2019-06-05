@@ -54,20 +54,23 @@
   </div>
 
   <div class="right-content">
+    
+    <div class="groups">
       <% if @user == current_user %>
-      <h2>My Interests</h2>
+        <h2>My Interests</h2>
+        <% @user.user_interests.each do |user_interest| %>
+          <p><%= user_interest.interest.category %></p>
+        <% end %>
       <% else %>
       <h2>Common Interests</h2>
+        <% @common_interests.each do |common| %>
+          <strong> <p style="background-color: #EEF7F0;"><%= common.category %></p> </strong>
+        <% end %>
+        <% @not_common_interests.each do |common| %>
+          <p><%= common.category %></p>
+        <% end %>
       <% end %>
-    <div class="groups">
-      <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
-      <br>
-      <a href="#" class="btntransparent" style="width: 200px;">Girls Who Code</a>
-      <br>
-      <a href="#" class="btntransparent" style="width: 200px;">Paris Lovers</a>
-      <br>
-      <a href="#" class="btntransparent" style="width: 200px;">Weekend Getaways</a>
-      <br>
+
     </div>
   </div>
 
@@ -78,7 +81,7 @@
     <% if @user == current_user %>
       <h2>Events I'm Attending</h2>
     <% elsif @user.events.empty? %>
-      <h2>Events <%=@user.first_name.capitalize%> is not attending any events</h2>
+      <h2><%=@user.first_name.capitalize%> is not attending any events</h2>
     <% else %>
       <h2>Events <%=@user.first_name.capitalize%> is attending</h2>
     <% end %>
