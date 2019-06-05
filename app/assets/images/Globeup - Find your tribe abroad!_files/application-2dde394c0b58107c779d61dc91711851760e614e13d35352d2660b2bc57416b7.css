@@ -19344,6 +19344,7 @@ p {
   width: 120px;
   text-align: center;
   margin-right: 50px;
+  border: 2px solid #89023E;
 }
 
 /* line 37, app/assets/stylesheets/pages/_components.scss */
