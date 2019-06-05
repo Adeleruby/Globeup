@@ -19418,6 +19418,7 @@ div.btnpurple {
   display: flex;
   align-items: center;
   margin: 5px auto;
+  margin-bottom: 54px;
 }
 
 /* line 1, app/assets/stylesheets/pages/_footer.scss */
