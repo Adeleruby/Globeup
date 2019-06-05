@@ -7451,6 +7451,15 @@ button.bg-dark:focus {
   border: 1px solid #dee2e6 !important;
 }
 
+#guide {
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+  position: relative;
+  padding: 3px;
+  display: inline-block;
+  border-radius: 7px;
+}
+
+
 /* line 8, node_modules/bootstrap/scss/utilities/_borders.scss */
 .border-top {
   border-top: 1px solid #dee2e6 !important;
@@ -18634,7 +18643,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin: 0 40px;
+  margin: -8px 113px;
 }
 
 /* line 7, app/assets/stylesheets/components/_card.scss */
@@ -19393,12 +19402,13 @@ div.btnpurple {
 /* line 77, app/assets/stylesheets/pages/_components.scss */
 #cityguide {
   position: relative;
-  padding-top: 15px;
+  padding-top: 26px;
   justify-content: space-around;
-  padding-bottom: 15px;
+  padding-bottom: 43px;
   background-position: center;
   display: flex;
   align-items: center;
+  text-align: justify;
 }
 
 /* line 87, app/assets/stylesheets/pages/_components.scss */
@@ -19407,7 +19417,7 @@ div.btnpurple {
   justify-content: space-around;
   display: flex;
   align-items: center;
-  margin: 5px;
+  margin: 5px auto;
 }
 
 /* line 1, app/assets/stylesheets/pages/_footer.scss */
