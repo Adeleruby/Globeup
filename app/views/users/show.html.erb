@@ -25,10 +25,10 @@
 
         <div class="col-md-4 col-sm-6 col-xs-12 usersocials" style="margin-left: -20px;">
             <ul class="social-icons">
-              <li><a class="facebook" href="#" style="background-color: white;"> <i class="fab fa-facebook-f"></i></a></li>
-              <li><a class="twitter" href="#" style="background-color: white;"><i class="fab fa-twitter"></i></a></li>
-              <li><a class="instagram" href="#" style="background-color: white;"><i class="fab fa-instagram"></i></a></li>
-              <li><a class="email" href="#" style="background-color: white;"><i class="fas fa-envelope"></i></a></li>
+              <li><a class="facebook" href="#" style="background-color: white; color: #89023E;"> <i class="fab fa-facebook-f"></i></a></li>
+              <li><a class="twitter" href="#" style="background-color: white; color: #89023E"><i class="fab fa-twitter"></i></a></li>
+              <li><a class="instagram" href="#" style="background-color: white; color: #89023E"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="email" href="#" style="background-color: white; color: #89023E"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </div>
 
@@ -39,8 +39,7 @@
     <div class="profile-container">
       <div class="about-section">
         <h2>About <%=@user.first_name.capitalize%></h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate debitis, veniam tempora eaque voluptas dolor natus rerum veritatis culpa inventore reprehenderit laboriosam, odio, fugiat eum velit harum repudiandae porro impedit.
-        </p>
+        <p> <%=@user.about %> </p>
       </div>
       <br>
       <% unless @user == current_user %>

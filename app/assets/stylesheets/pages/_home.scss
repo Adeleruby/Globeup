@@ -263,5 +263,91 @@ body {
   margin-bottom: 30px;
 }
 
+.cities-mobile {
+  margin: 30px 0;
+}
+.underline {
+  height: 5px;
+  width: 90px;
+  background-color: #fff;
+  margin: 0 auto;
+}
 
+@media(max-width: 992px) {
+  .maincontainer {
+    max-height: none;
+    display: block;
+  }
 
+  .maintext {
+    width: 90%;
+    padding-top: 30px;
+    margin-left: 30px;
+  }
+
+  .maintext h1 {
+    font-size: 40px
+  }
+
+  .mainimage img {
+    width: 100vw;
+    margin-right: 0;
+  }
+
+  .whitebox {
+    margin: 0 auto;
+    display: block;
+  }
+
+   .whiteboxtext {
+    margin: 0;
+    padding: 0;
+  }
+
+  .whiteboximg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .whiteboximg img {
+    width: 50vw;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .mb-style-2 blockquote {
+    padding-top: 120px;
+  }
+
+  .mb-style-2 blockquote:after {
+    font-size: 40px;
+    height: 90px;
+    line-height: 90px;
+    margin-left: -47px;
+    width: 90px;
+  }
+
+  .mb-style-2 blockquote:before {
+    width: 100%;
+  }
+
+  .mb-style-2 blockquote p {
+    font-size: 19px
+  }
+
+  .mb-wrap {
+    padding: 0 20px;
+  }
+
+  .mb-attribution {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .citycard {
+    justify-content: center;
+  }
+
+}
