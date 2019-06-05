@@ -203,15 +203,23 @@ input#user_email.form-control.string.email.optional {
 .map {
   height: 30%;
   width: 30%;
+  border: #464655;
 }
 
 .btnevent {
   margin: 0 auto;
   padding-top: 30px;
   padding: 5px;
+  margin-left: 10px;
 }
 
 #eventdescription {
   background-color: white;
   margin: 10px;
+}
+
+.map-description {
+  background-color: white;
+  min-height: 130px;
+  margin-bottom: 10px;
 }
