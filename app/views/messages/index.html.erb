@@ -5,11 +5,9 @@
       <div class="tab">
         <button class="button tablinks" onclick='openChat(event, "chat-<%= chat.id %>")'><%= chat.name %>
           <div class="button-flex">
+            <%= cl_image_tag chat.receiver.profile_pic, class: "large-avatar-square" %>
             <p>hello</p>
             <p>hello</p>
-            <p>hello</p>
-
-
           </div>
         </button>
       </div>
