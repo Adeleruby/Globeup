@@ -18,6 +18,15 @@
   font-size: 14px;
   font-weight: light;
   background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.navbar-replace {
+  min-height: 80px;
+  padding-top: 60px;
 }
 
 .lhs-nav {
