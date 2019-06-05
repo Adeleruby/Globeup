@@ -20,6 +20,9 @@ class MessagesController < ApplicationController
 
   def index
     @chat_room = Message.where(user_id: current_user).map { |msg| msg.chat_room }.uniq
+    @chat_room << ChatRoom.where(receiver_id: current_user.id)
+    @chat_room = @chat_room.flatten.uniq
+    # raise
   end
 
   private

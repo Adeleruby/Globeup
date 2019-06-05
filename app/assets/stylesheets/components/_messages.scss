@@ -1,5 +1,5 @@
 .messages-header {
-  margin: 10px
+  margin: 25px
 }
 .messages {
   // font-size: 14px;
@@ -14,18 +14,21 @@
 .message {
   display: flex;
   margin-bottom: 10px;
+  .message-avatar {
+    margin: 5px 0px;
+  }
   &.right {
     flex-direction: row-reverse;
     .message-content {
-      background-color: #F2F9FC;
+      background-color: #FBF1EC;
     }
   }
 }
 .message-content {
-  background-color: #F7F7F7;
-  border-radius: 3px;
-  margin: 0 10px;
-  padding: 11px 10px 8px 10px;
+  background-color: #EEF7F0;
+  border-radius: 20px;
+  margin: 5px 10px;
+  padding: 10px 15px 10px 15px;
 }
 
 #create-message {
@@ -73,7 +76,7 @@ input.form-control {
   width: 100vw;
   display: flex;
   .chat-tabs {
-    margin: 10px;
+    margin: 18px 10px 0px 10px;
   }
   .all-chats {
     flex-grow: 1;
