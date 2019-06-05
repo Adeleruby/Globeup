@@ -31,8 +31,7 @@
   </div>
 
    <div class="title-box">
-    <h2> Events near you in <%= @city.name %> </h2>
-    <p><%= @city.country_name %></p>
+    <h2> Events near you in <%= @city.name %>, <%= @city.country_name %></h2>
   </div>
 
     <div class="cards-container">
@@ -42,6 +41,7 @@
           <div class="card-info">
             <h2><%= event.name %></h2>
             <p><%= event.location %></p>
+            <p><%= event.starts.strftime("%A, %d %b %Y %l:%M %p") %></p>
             <div class=details-link>
               <%= link_to event_path(event) do %>
                 <p>Details</p>
@@ -60,7 +60,7 @@
 
 <div class="member-display">
   <% if @display_users.any? %>
-    <h2> Women in <%= @city.name %> </h2>
+    <h2> Members in <%= @city.name %> </h2>
     <div class="member-row scrolling-wrapper-flexbox">
     <% @display_users.each do |person| %>
       <%= link_to user_path(person) do %>

@@ -2,6 +2,8 @@
 .custom-nav a {
   text-decoration: none;
   color: black;
+  font-family: Playfair display;
+  font-weight: bold;
 }
 
 .custom-nav a:hover {
@@ -103,4 +105,11 @@
 
 }
 
+.inneracc h3 {
+  font-style: normal;
+  font-size: 20px;
+}
 
+.inneracc p {
+  font-style: normal;
+}
