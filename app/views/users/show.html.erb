@@ -82,6 +82,7 @@
       <div class="card-info">
         <h2><%= event.name %></h2>
         <p><%= event.location %></p>
+        <p><%= event.starts.strftime("%A, %d %b %Y %l:%M %p") %></p>
         <div class=details-link>
           <%= link_to event_path(event) do %>
             <p>Details</p>

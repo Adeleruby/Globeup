@@ -79,13 +79,14 @@ div.btnpurple {
 }
 
 #cityguide {
-  position: relative;
-  padding-top: 15px;
-  justify-content: space-around;
-  padding-bottom: 15px;
-  background-position: center;
-  display: flex;
-  align-items: center;
+ position: relative;
+ padding-top: 26px;
+ justify-content: space-around;
+ padding-bottom: 43px;
+ background-position: center;
+ display: flex;
+ align-items: center;
+ text-align: justify;
 }
 
 #cityguidebutton {
@@ -93,7 +94,8 @@ div.btnpurple {
   justify-content: space-around;
   display: flex;
   align-items: center;
-  margin: 5px;
+  margin: 5px auto;
+  margin-bottom: 54px;
 }
 
 .btnpink{
