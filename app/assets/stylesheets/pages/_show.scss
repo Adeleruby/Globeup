@@ -199,3 +199,19 @@ input:-internal-autofill-selected {
 input#user_email.form-control.string.email.optional {
    background-color: #FBF1EC !important;
 }
+
+.map {
+  height: 30%;
+  width: 30%;
+}
+
+.btnevent {
+  margin: 0 auto;
+  padding-top: 30px;
+  padding: 5px;
+}
+
+#eventdescription {
+  background-color: white;
+  margin: 10px;
+}
