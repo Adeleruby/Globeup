@@ -27,10 +27,18 @@
 .tab-details {
   text-align: left;
   font-size: 20px;
+  margin-left: 15px;
+  margin-top: 5px;
+  .tab-username {
+    margin-bottom: 13px;
+  }
   .last-message {
     color: #8D8D8D;
     font-size: 15px;
+    margin-bottom: 0px
   }
 }
 
-
+.active {
+  background-color: #EEF7F0 !important;
+}

@@ -1,16 +1,16 @@
 <h1 class="messages-header">Messages</h1>
 <div class="chat-index-container">
   <div class="chat-tabs">
+    <% counter = 0 %>
     <% @chat_room.each do |chat| %>
+    <% counter += 1 %>
       <div class="tab">
-        <button class="button tablinks" onclick='openChat(event, "chat-<%= chat.id %>")'>
+        <button id="" class="<%= counter == 1 ? "button tablinks active" : "button tablinks" %>" onclick='openChat(event, "chat-<%= chat.id %>")'>
           <div class="button-flex">
             <%= cl_image_tag chat.receiver.profile_pic, class: "large-avatar-square tab-avatar" %>
             <div class="tab-details">
-              <p> <%= chat.receiver.first_name.capitalize %> <%= chat.receiver.last_name.capitalize %> </p>
+              <p class="tab-username"> <%= chat.receiver.first_name.capitalize %> <%= chat.receiver.last_name.capitalize %> </p>
               <p class="last-message"><%= chat.messages.last.content %></p>
-
-
             </div>
           </div>
         </button>
@@ -18,13 +18,15 @@
     <% end %>
   </div>
   <div class="all-chats">
+    <% counter = 0 %>
     <% @chat_room.each do |chat| %>
-      <div class="tabcontent" id="chat-<%= chat.id %>">
+      <% counter += 1 %>
+      <div class="tabcontent" id="chat-<%= chat.id %>" style="<%= counter == 1 ? "display: block" : "display: none" %>">
         <!-- <div class="row"> -->
         <div class="chat-width">
           <!-- col-sm-6 col-sm-offset-3 -->
           <div class="messages-and-create-container">
-            <div class="messages">
+            <div class="messages" id="chat-element-<%= chat.id %>">
               <% chat.messages.each do |message| %>
                 <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
               <% end %>
@@ -44,7 +46,7 @@
           App['chat_room_<%= chat.id %>'] = App.cable.subscriptions.create({ channel: 'ChatRoomsChannel', chat_room_id: <%= chat.id %> }, {
             received: (data) => {
               if (data.current_user_id !== <%= current_user.id %>) {
-                let messagesContainer = document.querySelector('.messages');
+                let messagesContainer = document.selectElementById("chat-element-<%= chat.id %>");
                 messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
                 scrollLastMessageIntoView();
               }
@@ -70,5 +72,4 @@ function openChat(evt, chat_id) {
   evt.currentTarget.className += " active";
 }
 </script>
-
 
