@@ -118,3 +118,22 @@
 #user-page {
   padding: 20px;
 }
+
+
+.citycardborder {
+  border: 1px solid transparent;
+  margin: auto;
+  width: 13rem;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  transition: 1s;
+  border-radius: 2px;
+&:hover {
+  border: 1px solid white;
+}
+
+}
+
+
+
