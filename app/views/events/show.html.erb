@@ -44,33 +44,35 @@
   <div class="eventsright">
     <div
       id="map"
-      class="show-map team-border small-top-border"
+      class="show-map team-border small-top-border no-bottom-border"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
     <div class="map-description">
-      <h2 style="margin-top: 20px; text-align: center"> Members Attending</h2>
-      <% @attendees.each do |person| %>
+      <h2 style="margin-top: 20px; text-align: center; padding-top: 19px;"> Members Attending</h2>
+
+      <div class="attendeegroup">
+        <% @attendees.each do |person| %>
         <div class="user-photo">
           <%= link_to user_path(person.attendee_id) do %>
             <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
           <% end %>
         </div>
       <% end %>
-      <div class="button-space">
+      </div>
+
+    </div>
+    <div class="button-space">
       <% unless @event.owner == current_user %>
       <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btnpurple btnevent" %>
       <% end %>
     </div>
-    </div>
   </div>
+
+
 </div>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
 
   <div class="d-flex justify-content-around">
     <% if @event.owner == current_user %>

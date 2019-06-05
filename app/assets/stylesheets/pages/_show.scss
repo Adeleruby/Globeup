@@ -220,8 +220,11 @@ input#user_email.form-control.string.email.optional {
 
 .map-description {
   background-color: white;
-  min-height: 130px;
-  margin-bottom: 10px;
+  min-height: 382px;
+  margin-top: -20px;
+  border-left: 2px solid #CC7178;
+  border-bottom: 2px solid #CC7178;
+  border-right: 2px solid #CC7178;
 }
 
 .user-photo {
