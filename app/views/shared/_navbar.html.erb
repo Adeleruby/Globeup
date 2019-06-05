@@ -37,12 +37,20 @@
   </div>
   <div class="collapse" id="collapseExample">
     <div class="column">
-      <%= link_to "Home", new_user_session_path, class: "d-block" %>
-      <%= link_to "Who we are", new_user_registration_path, class: "d-block" %>
-      <%= link_to "Cities", new_user_session_path, class: "d-block" %>
-      <%= link_to "Messages", messages_path, class: "d-block" %>
-      <%= link_to "My profile", user_path(current_user), class: "d-block" %>
-      <%= link_to "Logout", destroy_user_session_path, class: "d-block", method: :delete %>
+      <% if !current_user.nil? %>
+        <%= link_to "Home", new_user_session_path, class: "d-block" %>
+        <%= link_to "Who we are", new_user_registration_path, class: "d-block" %>
+        <%= link_to "Cities", new_user_session_path, class: "d-block" %>
+        <%= link_to "Messages", messages_path, class: "d-block" %>
+        <%= link_to "My profile", user_path(current_user), class: "d-block" %>
+        <%= link_to "Logout", destroy_user_session_path, class: "d-block", method: :delete %>
+      <% else %>
+        <%= link_to "Home", new_user_session_path, class: "d-block" %>
+        <%= link_to "Who we are", new_user_registration_path, class: "d-block" %>
+        <%= link_to "Cities", new_user_session_path, class: "d-block" %>
+        <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "" %>
+      <% end %>
     </div>
   </div>
 </div>
