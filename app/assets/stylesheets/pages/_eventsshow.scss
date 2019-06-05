@@ -29,6 +29,10 @@
   height: 50vh;
 }
 
+.no-bottom-border {
+  border-bottom: none;
+}
+
 .eventimg {
   height: 50vh;
   width: 100%;
@@ -60,4 +64,10 @@
 
 .eventcontact {
   display: flex;
+}
+
+.attendeegroup {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
