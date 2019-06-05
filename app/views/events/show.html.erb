@@ -52,7 +52,7 @@
       <h2 style="margin-top: 20px; text-align: center"> Members Attending</h2>
       <% @attendees.each do |person| %>
         <div class="user-photo">
-          <%= link_to user_path(person) do %>
+          <%= link_to user_path(person.attendee_id) do %>
             <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
           <% end %>
         </div>
