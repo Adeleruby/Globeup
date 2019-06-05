@@ -25,6 +25,7 @@
   </div>
   <div class="rhs-nav">
     <% if !current_user.nil? %>
+      <%= link_to "Messages", messages_path, class: "" %>
       <%= link_to "Logout", destroy_user_session_path, class: 'nav-link', method: :delete %>
       <%= link_to "My profile", user_path(current_user), class: "" %>
 

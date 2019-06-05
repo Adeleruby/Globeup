@@ -1,6 +1,7 @@
+<div class="chat-index-container">
   <% @chat_room.each do |chat| %>
     <div class="tab">
-      <button class="tablinks" onclick='openCity(event, "chat-<%= chat.id %>")'><%= chat.id %></button>
+      <button class="tablinks" onclick='openCity(event, "chat-<%= chat.id %>")'><%= chat.name %></button>
     </div>
   <% end %>
   <div class="all-chats">

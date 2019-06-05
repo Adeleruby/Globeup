@@ -42,15 +42,10 @@
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate debitis, veniam tempora eaque voluptas dolor natus rerum veritatis culpa inventore reprehenderit laboriosam, odio, fugiat eum velit harum repudiandae porro impedit.
         </p>
       </div>
-      <div class="chatbtn">
-        <%= params[:id] %>
-        <% unless @user == current_user %>
-          <%= link_to "Message #{@user.first_name}", chat_rooms_path(:user_id => @user.id), :method => :post %>
-        <% end %>
-
-        <a href="#" class=btnpurple style="width: 250px">Chat with <%=@user.first_name.capitalize%></a>
-
-      </div>
+      <br>
+      <% unless @user == current_user %>
+        <%= link_to "Message #{@user.first_name}", chat_rooms_path(:user_id => @user.id), class: "btnpurple", :method => :post %>
+      <% end %>
     </div>
   </div>
 
@@ -73,27 +68,26 @@
 <div class="usereventscont">
   <div class="userevents">
     <% if @user == current_user %>
-    <h2> My Events </h2>
+      <h2> My Events </h2>
     <% else %>
-    <h2>Events <%=@user.first_name.capitalize%> is attending</h2>
+      <h2>Events <%=@user.first_name.capitalize%> is attending</h2>
     <% end %>
   </div>
 </div>
 
 <div class="cards-container", id="attend">
-      <% @user.events.each do |event| %>
-        <div class="card">
-          <%= cl_image_tag event.photo %>
-          <div class="card-info">
-            <h2><%= event.name %></h2>
-            <p><%= event.starts.strftime("%A, %d %b %Y %l:%M %p") %></p>
-            <p><%= event.location %></p>
-            <div class=details-link>
-              <%= link_to event_path(event) do %>
-                <p>Details</p>
-              <% end %>
-            </div>
-          </div>
+  <% @user.events.each do |event| %>
+    <div class="card">
+      <%= cl_image_tag event.photo %>
+      <div class="card-info">
+        <h2><%= event.name %></h2>
+        <p><%= event.location %></p>
+        <div class=details-link>
+          <%= link_to event_path(event) do %>
+            <p>Details</p>
+          <% end %>
         </div>
-       <% end %>
-  </div>
+      </div>
+    </div>
+  <% end %>
+</div>
