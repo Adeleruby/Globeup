@@ -1,13 +1,17 @@
-<h1>Messages</h1>
+<h1 class="messages-header">Messages</h1>
 <div class="chat-index-container">
   <div class="chat-tabs">
     <% @chat_room.each do |chat| %>
       <div class="tab">
-        <button class="button tablinks" onclick='openChat(event, "chat-<%= chat.id %>")'><%= chat.name %>
+        <button class="button tablinks" onclick='openChat(event, "chat-<%= chat.id %>")'>
           <div class="button-flex">
-            <%= cl_image_tag chat.receiver.profile_pic, class: "large-avatar-square" %>
-            <p>hello</p>
-            <p>hello</p>
+            <%= cl_image_tag chat.receiver.profile_pic, class: "large-avatar-square tab-avatar" %>
+            <div class="tab-details">
+              <p> <%= chat.receiver.first_name.capitalize %> <%= chat.receiver.last_name.capitalize %> </p>
+              <p class="last-message"><%= chat.messages.last.content %></p>
+
+
+            </div>
           </div>
         </button>
       </div>
