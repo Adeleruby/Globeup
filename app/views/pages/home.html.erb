@@ -15,18 +15,22 @@
 
 
 <div class="citiescont d-none d-sm-block">
-  <h2 style="margin-left: 115px;">Cities</h2>
-    <div class="slick-carousel">
-    <% @cities.each do |city| %>
-      <div class="inner">
-      <%= link_to city_path(city) do %>
-        <div class="citycard" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path city.card_photo %>)";>
-        <h2><%= city.name %></h2>
+    <h2 style="margin-left: 115px;">Cities</h2>
+      <div class="slick-carousel">
+      <% @cities.each do |city| %>
+        <div class="inner">
+        <%= link_to city_path(city) do %>
+
+          <div class="citycard" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path city.card_photo %>)";>
+            <div class="citycardborder">
+            <h2><%= city.name %></h2>
+            </div>
+          </div>
+
+          <% end %>
         </div>
-        <% end %>
+      <% end %>
       </div>
-    <% end %>
-    </div>
 </div>
 
 <div class="cities-mobile d-block d-sm-none">

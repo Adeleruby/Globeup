@@ -1,7 +1,7 @@
 <div class="custom-nav">
   <div class="lhs-nav">
     <div class="toggle-button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-      <i class="fas fa-angle-double-down"></i>
+      <i class="fas fa-bars" style="color: #fff;"></i>
     </div>
     <%= link_to "Home", root_path, class: "hidden-md" %>
     <%= link_to "Who we are", about_path, class: "hidden-md" %>
@@ -25,22 +25,24 @@
   </div>
   <div class="rhs-nav">
     <% if !current_user.nil? %>
-      <%= link_to "Messages", messages_path, class: "" %>
-      <%= link_to "My profile", user_path(current_user), class: "" %>
-      <%= link_to "Logout", destroy_user_session_path, class: 'nav-link', method: :delete %>
+      <%= link_to "My Profile", user_path(current_user), class: "hidden-md" %>
+      <%= link_to "My Messages", messages_path, class: "hidden-md" %>
+
+      <%= link_to "Logout", destroy_user_session_path, class: 'nav-link hidden-md', method: :delete %>
 
     <% else %>
       <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
       <%= link_to "Sign Up", new_user_registration_path, class: "" %>
-          <!-- <a class="nav-link" href="#">Login</a> -->
     <% end %>
   </div>
   <div class="collapse" id="collapseExample">
     <div class="column">
-      <%= link_to "Home", new_user_session_path, class: "" %>
-      <%= link_to "Who we are", new_user_registration_path, class: "" %>
-      <%= link_to "Cities", new_user_session_path, class: "" %>
-      <%= link_to "Events", new_user_registration_path, class: "" %>
+      <%= link_to "Home", new_user_session_path, class: "d-block" %>
+      <%= link_to "Who we are", new_user_registration_path, class: "d-block" %>
+      <%= link_to "Cities", new_user_session_path, class: "d-block" %>
+      <%= link_to "Messages", messages_path, class: "d-block" %>
+      <%= link_to "My profile", user_path(current_user), class: "d-block" %>
+      <%= link_to "Logout", destroy_user_session_path, class: "d-block", method: :delete %>
     </div>
   </div>
 </div>

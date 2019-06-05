@@ -103,6 +103,9 @@
   margin: auto;
 }
 
+.cardborder {
+  border: 1px solid white;
+}
 
 .cityname {
   display: block;
@@ -153,6 +156,8 @@
   background-color: #FBF1EC;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
+
 }
 
 .reviewscont h1 {

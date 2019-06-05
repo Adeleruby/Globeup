@@ -38,8 +38,13 @@
   <div class="middle-content">
     <div class="profile-container">
       <div class="about-section">
-        <h2>About <%=@user.first_name.capitalize%></h2>
-        <p> <%=@user.about %> </p>
+         <% if @user == current_user %>
+          <h2>About Me</h2>
+          <p> <%=@user.about %> </p>
+        <% else %>
+          <h2>About <%=@user.first_name.capitalize%></h2>
+          <p> <%=@user.about %> </p>
+        <% end %>
       </div>
       <br>
       <% unless @user == current_user %>
@@ -49,7 +54,11 @@
   </div>
 
   <div class="right-content">
-    <h2>Common Interests</h2>
+      <% if @user == current_user %>
+      <h2>My Interests</h2>
+      <% else %>
+      <h2>Common Interests</h2>
+      <% end %>
     <div class="groups">
       <a href="#" class="btntransparent" style="width: 200px;">Fashion</a>
       <br>
@@ -67,7 +76,7 @@
 <div class="usereventscont">
   <div class="userevents">
     <% if @user == current_user %>
-      <h2> My Events </h2>
+      <h2>Events I'm Attending</h2>
     <% elsif @user.events.empty? %>
       <h2>Events <%=@user.first_name.capitalize%> is not attending any events</h2>
     <% else %>
