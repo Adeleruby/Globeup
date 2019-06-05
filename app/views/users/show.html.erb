@@ -69,6 +69,8 @@
   <div class="userevents">
     <% if @user == current_user %>
       <h2> My Events </h2>
+    <% elsif @user.events.empty? %>
+      <h2>Events <%=@user.first_name.capitalize%> is not attending any events</h2>
     <% else %>
       <h2>Events <%=@user.first_name.capitalize%> is attending</h2>
     <% end %>
