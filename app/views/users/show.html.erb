@@ -58,7 +58,7 @@
       <% if @user == current_user %>
         <h2>My Interests</h2>
         <% @user.user_interests.each do |user_interest| %>
-          <p><%= user_interest.interest.category %></p>
+          <p class="btntransparent"><%= user_interest.interest.category %></p>
         <% end %>
       <% else %>
         <% unless @common_interests.nil? %>
