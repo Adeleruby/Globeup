@@ -52,8 +52,8 @@ border-radius: 5px;
 
 .title-box {
   padding-left: 100px;
-  padding-top: 30px;
-  height: 100px;
+  padding-top: 50px;
+  height: 120px;
   background-color: #EEF7F0;
   margin-bottom: -20px;
 }
@@ -70,11 +70,8 @@ border-radius: 5px;
   // padding-bottom: 120px;
   background-color: #EEF7F0;
   margin-right: 100px;
-  margin-left: 100px;
-  // margin-top: 50px;
-  // margin-bottom: 100px;
-  // box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  width: 1080px;
+  margin-left: 80px;
+  width: 1100px;
   min-height: 400px;
 }
 
@@ -95,7 +92,7 @@ border-radius: 5px;
 }
 
 .card {
-    min-width: 247px;
+    min-width: 252px;
     height: 350px;
     background-color: #FBF1EC;
     padding: 10px 10px 10px 10ppx;
@@ -112,8 +109,6 @@ border-radius: 5px;
 .card-info {
   padding: 15px 0px 8px 0px;
   text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .card-info a {
