@@ -5,7 +5,7 @@ import { search } from './components/search';
 import { eventListen } from './components/search';
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 import { initMapbox } from './components/init_mapbox';
-import { eventListen } from './components'
+
 
 initSelect2();
 
