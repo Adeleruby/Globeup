@@ -36,9 +36,26 @@ p {
   border: 2px solid #89023E;
 }
 
+.btncontact {
+    border-radius: 10px;
+    background-color: #89023E;
+    color: #FBF1EC !important;
+    font-size: 15px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.btncontact a {
+ color: #FBF1EC !important;
+}
+
 .button-negative-margin {
-  margin-top: -50px !important;
-  position: relative;
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
 }
 
 div.btnpurple {

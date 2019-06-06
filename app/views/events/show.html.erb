@@ -1,4 +1,5 @@
 <div class="eventscontainer">
+  <div class="eventsinner">
 
   <div class="eventsleft">
 
@@ -36,7 +37,7 @@
           <% end %>
         </div>
         <div class="esright" id="contact">
-          <strong><%= link_to "Contact Organiser", user_path(@event.owner) %></strong>
+          <p class="btncontact"><%= link_to "Contact Organiser", user_path(@event.owner) %></p>
         </div>
       </div>
     </div>
@@ -68,7 +69,7 @@
     </div>
     <div class="button-negative-margin">
       <% unless @event.owner == current_user %>
-        <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btnpurple btnevent" %>
+      <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btncontact" %>
       <% end %>
     </div>
   </div>
@@ -88,4 +89,5 @@
 
 <div class="moreevents">
 
+  </div>
 </div>
