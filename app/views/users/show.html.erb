@@ -94,14 +94,14 @@
   </div>
 </div>
 
-<div class="cards-container", id="attend">
+<div class="cards-container" style="padding-top: 0px; margin-top: -40px, margin-bottom: 30px;">
   <% @user.events.each do |event| %>
     <div class="card">
       <%= cl_image_tag event.photo %>
       <div class="card-info">
         <h2><%= event.name %></h2>
         <p><%= event.location %></p>
-        <p><%= event.starts.strftime("%A, %d %b %Y %l:%M %p") %></p>
+        <p><%= event.starts.strftime("%b %e %Y, %l %M %p") %></p>
         <div class=details-link>
           <%= link_to event_path(event) do %>
             <p>Details</p>
