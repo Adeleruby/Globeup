@@ -8,8 +8,14 @@ import { initMapbox } from './components/init_mapbox';
 // import { submitOnEnter } from './components/chat';
 
 // submitOnEnter();
-initMapbox();
-initSelect2();
-search();
-eventListen();
+// initMapbox();
+// initSelect2();
+// search();
+// eventListen();
 
+const url = window.location;
+
+$(document).ready(() => {
+  if (url.pathname === '/') { console.log('Yeah'); }
+  if (/\/users\/[1-9]*/.test(url.pathname)) { console.log('Regex bro'); }
+})

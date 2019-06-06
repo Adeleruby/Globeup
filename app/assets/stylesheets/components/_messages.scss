@@ -75,6 +75,7 @@ input.form-control {
 .chat-index-container {
   width: 100vw;
   display: flex;
+  min-height: calc(100vh - 80px - 350px);
   .chat-tabs {
     margin: 18px 10px 0px 10px;
   }
