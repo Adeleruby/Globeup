@@ -64,12 +64,12 @@
         <% unless @common_interests.nil? %>
         <h2>Common Interests</h2>
           <% @common_interests.each do |common| %>
-            <strong> <p style="background-color: #EEF7F0;"><%= common.category %></p> </strong>
+          <p style="background-color: #FBF1EC; font-weight: bold;" class="btntransparent"><%= common.category %></p>
           <% end %>
         <% end %>
         <% unless @not_common_interests.nil? %>
           <% @not_common_interests.each do |common| %>
-            <p><%= common.category %></p>
+            <p class="btntransparent" style="background-color: #fff;"><%= common.category %></p>
           <% end %>
         <% end %>
       <% end %>
