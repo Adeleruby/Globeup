@@ -36,8 +36,9 @@ p {
   border: 2px solid #89023E;
 }
 
-.button-space {
-  margin-top: 50px;
+.button-negative-margin {
+  margin-top: -50px !important;
+  position: relative;
 }
 
 div.btnpurple {
