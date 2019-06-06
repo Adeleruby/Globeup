@@ -74,8 +74,8 @@ border-radius: 5px;
   // margin-top: 50px;
   // margin-bottom: 100px;
   // box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   width: 1080px;
+  min-height: 400px;
 }
 
 #attend {
@@ -95,10 +95,13 @@ border-radius: 5px;
 }
 
 .card {
-  min-width: 200px;
-  height: 320px;
-  background-color: #FBF1EC;
-  padding: 10px 5px 5px 5px;
+    min-width: 247px;
+    height: 350px;
+    background-color: #FBF1EC;
+    padding: 10px 10px 10px 10ppx;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
   img {
     height: 180px;
     width: inherit;
