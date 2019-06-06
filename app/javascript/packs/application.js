@@ -19,5 +19,3 @@ $(document).ready(() => {
   // if (/\/chat_rooms\/[1-9]*/.test(url.pathname)) { console.log('Regex bro'); }
   if (/\/events\/[1-9]*/.test(url.pathname)) { initMapbox(); }
 })
-
-
