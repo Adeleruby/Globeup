@@ -9,8 +9,11 @@
 
 .maintext {
   width: 40%;
-  padding-top: 150px;
+  padding-top: 125px;
   margin-left: 100px;
+  p {
+    padding: 15px 0px;
+  }
 }
 
 .maintext h1{
@@ -46,12 +49,14 @@
   margin-right: 35px;
 }
 
-.maincontainerbtns .btnpurple{
+.maincontainerbtns {
+  .btnpurple {
+  margin-top: 65px;
   width: 253px;
   font-family: Playfair display;
   font-style: italic;
   font-size: 18px;
-
+  }
 }
 
 .city-img {
