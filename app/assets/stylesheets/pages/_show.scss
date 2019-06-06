@@ -119,6 +119,7 @@ border-radius: 5px;
   margin-top: -5px;
   a:hover {
     font-weight: bold;
+    text-decoration: none;
   }
   p {
     margin-bottom: 0px;
@@ -211,7 +212,7 @@ input#user_email.form-control.string.email.optional {
   margin: 0 auto;
   padding-top: 30px;
   padding: 5px;
-  margin-left: 126px;
+  margin-left: 143px;
 }
 
 #eventdescription {
@@ -232,4 +233,12 @@ input#user_email.form-control.string.email.optional {
   // position: center;
 text-align: center;
 
+}
+
+#contact a {
+  left: 38%;
+  margin-left: 86px;
+  &:hover {
+    color: #464655
+  }
 }
