@@ -35,8 +35,8 @@
             <%= cl_image_tag @event.owner.profile_pic, class: "organizerimg" %>
           <% end %>
         </div>
-        <div class="esright">
-          <%= link_to "Contact Organiser", user_path(@event.owner) %>
+        <div class="esright" id="contact">
+          <strong><%= link_to "Contact Organiser", user_path(@event.owner) %></strong>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
       </div>
 
     </div>
-    <div class="button-space">
+    <div class="button-negative-margin">
       <% unless @event.owner == current_user %>
       <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btnpurple btnevent" %>
       <% end %>
