@@ -1,4 +1,5 @@
 <div class="eventscontainer">
+  <div class="eventsinner">
 
   <div class="eventsleft">
 
@@ -36,7 +37,7 @@
           <% end %>
         </div>
         <div class="esright" id="contact">
-          <strong><%= link_to "Contact Organiser", user_path(@event.owner) %></strong>
+          <p class="btncontact"><%= link_to "Contact Organiser", user_path(@event.owner) %></p>
         </div>
       </div>
     </div>
@@ -52,36 +53,41 @@
       <h2 style="margin-top: 20px; text-align: center; padding-top: 19px;"> Members Attending</h2>
 
       <div class="attendeegroup">
-        <% @attendees.each do |person| %>
-        <div class="user-photo">
-          <%= link_to user_path(person.attendee_id) do %>
-            <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
+        <% if @attendees.count.zero? %>
+          <p>"Be the first one to sign up!"</p>
+        <% else %>
+          <% @attendees.each do |person| %>
+            <div class="user-photo">
+              <%= link_to user_path(person.attendee_id) do %>
+                <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
+              <% end %>
+            </div>
           <% end %>
-        </div>
-      <% end %>
+        <% end %>
       </div>
 
     </div>
     <div class="button-negative-margin">
-      <% unless @event.owner == current_user %>
-      <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btnpurple btnevent" %>
+      <% unless @event.owner == current_user || @attendees.any? {|a| a.user == current_user } %>
+        <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btncontact" %>
       <% end %>
     </div>
   </div>
 
 
 </div>
-  <br>
+<br>
 
 
-  <div class="d-flex justify-content-around">
-    <% if @event.owner == current_user %>
-      <%= link_to "Edit this event", edit_event_path(@event), class: "btn btn-flat banner-button" %>
-    <%= link_to "Delete this event", event_path(@event), class: "btn btn-flat banner-button", :method => :delete %>
-    <% end %>
+<div class="d-flex justify-content-around">
+  <% if @event.owner == current_user %>
+    <%= link_to "Edit this event", edit_event_path(@event), class: "btn btn-flat banner-button" %>
+  <%= link_to "Delete this event", event_path(@event), class: "btn btn-flat banner-button", :method => :delete %>
+  <% end %>
+</div>
+
+
+<div class="moreevents">
+
   </div>
-
-
-  <div class="moreevents">
-
-  </div>
+</div>

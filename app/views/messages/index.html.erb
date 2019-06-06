@@ -1,4 +1,4 @@
-<h1 class="messages-header">Messages</h1>
+ <h1 class="messages-header">Messages</h1>
 <div class="chat-index-container">
   <div class="chat-tabs">
     <% counter = 0 %>
@@ -10,7 +10,9 @@
             <%= cl_image_tag chat.receiver.profile_pic, class: "large-avatar-square tab-avatar" %>
             <div class="tab-details">
               <p class="tab-username"> <%= chat.receiver.first_name.capitalize %> <%= chat.receiver.last_name.capitalize %> </p>
-              <p class="last-message"><%= chat.messages.last.content %></p>
+              <% unless chat.messages.last == nil  %>
+                <p class="last-message"><%= chat.messages.last.content %></p>
+              <% end %>
             </div>
           </div>
         </button>
@@ -33,7 +35,7 @@
             </div>
             <div id="create-message">
               <%= simple_form_for [ chat, Message.new ], remote: true, html: {autocomplete: "off", id: "form" } do |f| %>
-                <%= f.input :content, label: false %>
+                <input class="form-control string required" type="text" name="message[content]" id="message_content<%= chat.id %>">
               <% end %>
             </div>
           </div>
@@ -46,7 +48,7 @@
           App['chat_room_<%= chat.id %>'] = App.cable.subscriptions.create({ channel: 'ChatRoomsChannel', chat_room_id: <%= chat.id %> }, {
             received: (data) => {
               if (data.current_user_id !== <%= current_user.id %>) {
-                let messagesContainer = document.selectElementById("chat-element-<%= chat.id %>");
+                let messagesContainer = document.getElementById("chat-element-<%= chat.id %>");
                 messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
                 scrollLastMessageIntoView();
               }
