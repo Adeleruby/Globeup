@@ -10,7 +10,9 @@
             <%= cl_image_tag chat.receiver.profile_pic, class: "large-avatar-square tab-avatar" %>
             <div class="tab-details">
               <p class="tab-username"> <%= chat.receiver.first_name.capitalize %> <%= chat.receiver.last_name.capitalize %> </p>
-              <p class="last-message"><%= chat.messages.last.content %></p>
+              <% unless chat.messages.last == nil  %>
+                <p class="last-message"><%= chat.messages.last.content %></p>
+              <% end %>
             </div>
           </div>
         </button>
