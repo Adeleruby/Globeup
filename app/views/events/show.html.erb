@@ -1,4 +1,5 @@
 <div class="eventscontainer">
+  <div class="eventsinner">
 
   <div class="eventsleft">
 
@@ -36,7 +37,7 @@
           <% end %>
         </div>
         <div class="esright" id="contact">
-          <strong><%= link_to "Contact Organiser", user_path(@event.owner) %></strong>
+          <p class="btncontact"><%= link_to "Contact Organiser", user_path(@event.owner) %></p>
         </div>
       </div>
     </div>
@@ -55,7 +56,8 @@
         <% @attendees.each do |person| %>
         <div class="user-photo">
           <%= link_to user_path(person.attendee_id) do %>
-            <%= cl_image_tag person.user.profile_pic, class: "small-avatar-square" %>
+            <%= cl_image_tag person.user.profile_pic, class: "organizerimg", style:"height: 80px;
+              width: 80px;" %>
           <% end %>
         </div>
       <% end %>
@@ -64,7 +66,7 @@
     </div>
     <div class="button-negative-margin">
       <% unless @event.owner == current_user %>
-      <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btnpurple btnevent" %>
+      <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btncontact" %>
       <% end %>
     </div>
   </div>
@@ -85,3 +87,4 @@
   <div class="moreevents">
 
   </div>
+</div>
