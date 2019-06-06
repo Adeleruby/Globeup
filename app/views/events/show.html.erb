@@ -69,7 +69,7 @@
     </div>
     <div class="button-negative-margin">
       <% unless @event.owner == current_user || @attendees.any? {|a| a.user == current_user } %>
-      <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btncontact" %>
+        <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btncontact" %>
       <% end %>
     </div>
   </div>
