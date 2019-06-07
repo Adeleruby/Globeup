@@ -3,7 +3,7 @@
 
   <div class="eventsleft">
 
-    <div class="eventdetails team-border" id="eventdescription">
+    <div class="eventdetails team-border set-min-height" id="eventdescription">
       <%= cl_image_tag @event.photo, class: "eventimg"%>
       <h2> <%= @event.name %></h2>
       <div class="eventsummary">
@@ -43,34 +43,36 @@
     </div>
   </div>
   <div class="eventsright">
-    <div
-      id="map"
-      class="show-map team-border small-top-border no-bottom-border"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-    <div class="map-description">
-      <h2 style="margin-top: 20px; text-align: center; padding-top: 19px;"> Members Attending</h2>
+    <div class="min-height-right">
+      <div
+        id="map"
+        class="show-map team-border small-top-border no-bottom-border"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <div class="map-description set-description-height">
+        <h2 style="margin-top: 20px; text-align: center; padding-top: 19px;"> Members Attending</h2>
 
-      <div class="attendeegroup">
-        <% if @attendees.count.zero? %>
-          <p>"Be the first one to sign up!"</p>
-        <% else %>
-          <% @attendees.each do |person| %>
-            <div class="user-photo event-photo-user">
-              <%= link_to user_path(person.attendee_id) do %>
-                <%= cl_image_tag person.user.profile_pic, class: "organizerimg", style:"width: 80px; height: 80px;" %>
-              <% end %>
-            </div>
+        <div class="attendeegroup">
+          <% if @attendees.count.zero? %>
+            <p>"Be the first one to sign up!"</p>
+          <% else %>
+            <% @attendees.each do |person| %>
+              <div class="user-photo event-photo-user">
+                <%= link_to user_path(person.attendee_id) do %>
+                  <%= cl_image_tag person.user.profile_pic, class: "organizerimg", style:"width: 80px; height: 80px;" %>
+                <% end %>
+              </div>
+            <% end %>
           <% end %>
+        </div>
+
+      </div>
+      <div class="button-negative-margin">
+        <% unless @event.owner == current_user || @attendees.any? {|a| a.user == current_user } %>
+          <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btncontact" %>
         <% end %>
       </div>
-
-    </div>
-    <div class="button-negative-margin">
-      <% unless @event.owner == current_user || @attendees.any? {|a| a.user == current_user } %>
-        <%= link_to "Register for this event!", event_attendees_path(@event), :method => :post, class: "btncontact" %>
-      <% end %>
     </div>
   </div>
 
